@@ -14,6 +14,27 @@
         <layout first="206" last="207" mapSet="JIS" modifiers="Modifiers"/>
     </layouts>
     <modifierMap id="Modifiers" defaultIndex="6">
+
+        <!--
+        Modifier keys:
+        shift         The left Shift key
+        rightShift    The right Shift key
+        anyShift      Matches either the left or right Shift key
+        option        The left Option key
+        rightOption   The right Option key
+        anyOption     Matches either the left or right Option key
+        control       The left Control key
+        rightControl  The right Control key
+        anyControl    Any Control key
+        command       The Command key
+        caps          The Caps Lock key
+
+        > Note that many hardware keyboards do not have both left and right versions of a modifier key. It is usually safest to specify modifers in terms of the "any" variants (anyShift, anyOption, anyControl).
+
+        Technical Note TN2056: Installable Keyboard Layouts by Apple
+        https://developer.apple.com/library/archive/technotes/tn2056/_index.html
+        -->
+
         <keyMapSelect mapIndex="0">
             <modifier keys=""/>
         </keyMapSelect>
@@ -38,6 +59,9 @@
     </modifierMap>
     <keyMapSet id="ANSI">
         <keyMap index="0">
+
+            <!-- Modifier keys: None -->
+
             <key code="0" output="a"/>
             <key code="1" output="s"/>
             <key code="2" output="d"/>
@@ -144,6 +168,9 @@
             <key code="126" output="&#x001E;"/>
         </keyMap>
         <keyMap index="1">
+
+            <!-- Modifier keys: Shift -->
+
             <key code="0" output="A"/>
             <key code="1" output="S"/>
             <key code="2" output="D"/>
@@ -250,6 +277,9 @@
             <key code="126" output="&#x001E;"/>
         </keyMap>
         <keyMap index="2">
+
+            <!-- Modifier keys: Option -->
+
             <key code="0" output=")"/>
             <key code="1" output="]"/>
             <key code="2" output="&#x003E;"/>
@@ -356,6 +386,9 @@
             <key code="126" output="&#x001E;"/>
         </keyMap>
         <keyMap index="3">
+
+            <!-- Modifier keys: Shift+Option -->
+
             <key code="0" output=""/>
             <key code="1" output=""/>
             <key code="2" output=""/>
@@ -462,6 +495,9 @@
             <key code="126" output="&#x001E;"/>
         </keyMap>
         <keyMap index="4">
+
+            <!-- Modifier keys: Command -->
+
             <key code="0" output="a"/>
             <key code="1" output="s"/>
             <key code="2" output="d"/>
@@ -568,6 +604,9 @@
             <key code="126" output="&#x001E;"/>
         </keyMap>
         <keyMap index="5">
+
+            <!-- Modifier keys: Caps Lock -->
+
             <key code="0" output="A"/>
             <key code="1" output="S"/>
             <key code="2" output="D"/>
@@ -672,6 +711,9 @@
             <key code="126" output="&#x001E;"/>
         </keyMap>
         <keyMap index="6">
+
+            <!-- Modifier keys: Control -->
+
             <key code="0" output=""/>
             <key code="1" output=""/>
             <key code="2" output=""/>
