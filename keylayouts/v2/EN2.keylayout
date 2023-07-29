@@ -1,8 +1,15 @@
-<!-- v2: Organized in a table -->
+<!-- v2: Organized in a table, sorted -->
+
+
+
 
 <?xml version="1.1" encoding="UTF-8"?>
 <!DOCTYPE keyboard SYSTEM "file://localhost/System/Library/DTDs/KeyboardLayout.dtd">
 <keyboard group="126" id="-32000" name="EN2" maxout="1">
+
+
+
+
     <layouts>
         <layout first="0" last="17" mapSet="ANSI" modifiers="Modifiers"/>
         <layout first="18" last="18" mapSet="JIS" modifiers="Modifiers"/>
@@ -15,28 +22,11 @@
         <layout first="200" last="201" mapSet="JIS" modifiers="Modifiers"/>
         <layout first="206" last="207" mapSet="JIS" modifiers="Modifiers"/>
     </layouts>
+
+
+
+
     <modifierMap id="Modifiers" defaultIndex="6">
-
-        <!--
-        Modifier keys:
-        shift         The left Shift key
-        rightShift    The right Shift key
-        anyShift      Matches either the left or right Shift key
-        option        The left Option key
-        rightOption   The right Option key
-        anyOption     Matches either the left or right Option key
-        control       The left Control key
-        rightControl  The right Control key
-        anyControl    Any Control key
-        command       The Command key
-        caps          The Caps Lock key
-
-        > Note that many hardware keyboards do not have both left and right versions of a modifier key. It is usually safest to specify modifers in terms of the "any" variants (anyShift, anyOption, anyControl).
-
-        Technical Note TN2056: Installable Keyboard Layouts by Apple
-        https://developer.apple.com/library/archive/technotes/tn2056/_index.html
-        -->
-
         <keyMapSelect mapIndex="0">
             <modifier keys=""/>
         </keyMapSelect>
@@ -44,13 +34,13 @@
             <modifier keys="command"/>
         </keyMapSelect>
         <keyMapSelect mapIndex="2">
-            <modifier keys="shift"/>
+            <modifier keys="caps"/>
         </keyMapSelect>
         <keyMapSelect mapIndex="3">
-            <modifier keys="option"/>
+            <modifier keys="shift"/>
         </keyMapSelect>
         <keyMapSelect mapIndex="4">
-            <modifier keys="control"/>
+            <modifier keys="option"/>
         </keyMapSelect>
         <keyMapSelect mapIndex="5">
             <modifier keys="option shift control"/>
@@ -60,63 +50,124 @@
         </keyMapSelect>
     </modifierMap>
 
+
+
+
     <keyMapSet id="ANSI">
 
-        <keyMap index="0">                          <!-- Modifier keys: None -->
-            <key code="0" output="a"/>              <!-- a -->                                                    <!-- QMK: KC_A -->
-            <key code="1" output="s"/>              <!-- s -->                                                    <!-- QMK: KC_S -->
-            <key code="2" output="d"/>              <!-- d -->                                                    <!-- QMK: KC_D -->
-            <key code="3" output="f"/>              <!-- f -->                                                    <!-- QMK: KC_F -->
-            <key code="4" output="h"/>              <!-- h -->                                                    <!-- QMK: KC_H -->
-            <key code="5" output="g"/>              <!-- g -->                                                    <!-- QMK: KC_G -->
-            <key code="6" output="z"/>              <!-- z -->                                                    <!-- QMK: KC_Z -->
-            <key code="7" output="x"/>              <!-- x -->                                                    <!-- QMK: KC_X -->
-            <key code="8" output="c"/>              <!-- c -->                                                    <!-- QMK: KC_C -->
-            <key code="9" output="v"/>              <!-- v -->                                                    <!-- QMK: KC_V -->
-            <key code="10" output="\"/>             <!-- Reverse Solidus -->                                      <!-- QMK: KC_BACKSLASH -->
-            <key code="11" output="b"/>             <!-- b -->                                                    <!-- QMK: KC_B -->
-            <key code="12" output="q"/>             <!-- q -->                                                    <!-- QMK: KC_Q -->
-            <key code="13" output="w"/>             <!-- w -->                                                    <!-- QMK: KC_W -->
-            <key code="14" output="e"/>             <!-- e -->                                                    <!-- QMK: KC_E -->
-            <key code="15" output="r"/>             <!-- r -->                                                    <!-- QMK: KC_R -->
-            <key code="16" output="y"/>             <!-- y -->                                                    <!-- QMK: KC_Y -->
-            <key code="17" output="t"/>             <!-- t -->                                                    <!-- QMK: KC_T -->
-            <key code="18" output="1"/>             <!-- 1 -->                                                    <!-- QMK: KC_1 -->
-            <key code="19" output="2"/>             <!-- 2 -->                                                    <!-- QMK: KC_2 -->
-            <key code="20" output="3"/>             <!-- 3 -->                                                    <!-- QMK: KC_3 -->
-            <key code="21" output="4"/>             <!-- 4 -->                                                    <!-- QMK: KC_4 -->
-            <key code="22" output="6"/>             <!-- 6 -->                                                    <!-- QMK: KC_6 -->
-            <key code="23" output="5"/>             <!-- 5 -->                                                    <!-- QMK: KC_5 -->
-            <key code="24" output="="/>             <!-- Equals Sign -->                                          <!-- QMK: KC_EQUAL -->
-            <key code="25" output="9"/>             <!-- 9 -->                                                    <!-- QMK: KC_9 -->
-            <key code="26" output="7"/>             <!-- 7 -->                                                    <!-- QMK: KC_7 -->
-            <key code="27" output="-"/>             <!-- Hyphen-Minus -->                                         <!-- QMK: KC_MINUS -->
-            <key code="28" output="8"/>             <!-- 8 -->                                                    <!-- QMK: KC_8 -->
-            <key code="29" output="0"/>             <!-- 0 -->                                                    <!-- QMK: KC_0 -->
-            <key code="30" output="]"/>             <!-- Right Square Bracket -->                                 <!-- QMK: KC_RIGHT_BRACKET -->
-            <key code="31" output="o"/>             <!-- o -->                                                    <!-- QMK: KC_O -->
-            <key code="32" output="u"/>             <!-- u -->                                                    <!-- QMK: KC_U -->
-            <key code="33" output="["/>             <!-- Left Square Bracket -->                                  <!-- QMK: KC_LEFT_BRACKET -->
-            <key code="34" output="i"/>             <!-- i -->                                                    <!-- QMK: KC_I -->
-            <key code="35" output="p"/>             <!-- p -->                                                    <!-- QMK: KC_P -->
-            <key code="36" output="&#x000D;"/>      <!-- Carriage Return (CR) -->                                 <!-- QMK: KC_ENTER -->
-            <key code="37" output="l"/>             <!-- l -->                                                    <!-- QMK: KC_L -->
-            <key code="38" output="j"/>             <!-- j -->                                                    <!-- QMK: KC_J -->
-            <key code="39" output="&#x0027;"/>      <!-- Apostrophe -->                                           <!-- QMK: KC_QUOTE -->
-            <key code="40" output="k"/>             <!-- k -->                                                    <!-- QMK: KC_K -->
-            <key code="41" output=";"/>             <!-- Semicolon -->                                            <!-- QMK: KC_SEMICOLON -->
-            <key code="42" output="\"/>             <!-- Reverse Solidus -->                                      <!-- QMK: KC_BACKSLASH -->
-            <key code="43" output=","/>             <!-- Comma -->                                                <!-- QMK: KC_COMMA -->
-            <key code="44" output="/"/>             <!-- Solidus -->                                              <!-- QMK: KC_SLASH -->
-            <key code="45" output="n"/>             <!-- n -->                                                    <!-- QMK: KC_N -->
-            <key code="46" output="m"/>             <!-- m -->                                                    <!-- QMK: KC_M -->
-            <key code="47" output="."/>             <!-- Full Stop -->                                            <!-- QMK: KC_DOT -->
-            <key code="48" output="&#x0009;"/>      <!-- Character Tabulation (HT, TAB) -->                       <!-- QMK: KC_TAB -->
-            <key code="49" output=" "/>             <!-- Space (SP) -->                                           <!-- QMK: KC_SPACE -->
-            <key code="50" output="`"/>             <!-- Grave Accent -->                                         <!-- QMK: KC_GRAVE -->
-            <key code="51" output="&#x0008;"/>      <!-- Backspace (BS) -->                                       <!-- QMK: KC_BACKSPACE -->
+        <!-- Default -->
+        <keyMap index="0">
+            <key code="0"   output="a"/>            <!-- a -->                                                    <!-- QMK: KC_A -->
+            <key code="11"  output="b"/>            <!-- b -->                                                    <!-- QMK: KC_B -->
+            <key code="8"   output="c"/>            <!-- c -->                                                    <!-- QMK: KC_C -->
+            <key code="2"   output="d"/>            <!-- d -->                                                    <!-- QMK: KC_D -->
+            <key code="14"  output="e"/>            <!-- e -->                                                    <!-- QMK: KC_E -->
+            <key code="3"   output="f"/>            <!-- f -->                                                    <!-- QMK: KC_F -->
+            <key code="5"   output="g"/>            <!-- g -->                                                    <!-- QMK: KC_G -->
+            <key code="4"   output="h"/>            <!-- h -->                                                    <!-- QMK: KC_H -->
+            <key code="34"  output="i"/>            <!-- i -->                                                    <!-- QMK: KC_I -->
+            <key code="38"  output="j"/>            <!-- j -->                                                    <!-- QMK: KC_J -->
+            <key code="40"  output="k"/>            <!-- k -->                                                    <!-- QMK: KC_K -->
+            <key code="37"  output="l"/>            <!-- l -->                                                    <!-- QMK: KC_L -->
+            <key code="46"  output="m"/>            <!-- m -->                                                    <!-- QMK: KC_M -->
+            <key code="45"  output="n"/>            <!-- n -->                                                    <!-- QMK: KC_N -->
+            <key code="31"  output="o"/>            <!-- o -->                                                    <!-- QMK: KC_O -->
+            <key code="35"  output="p"/>            <!-- p -->                                                    <!-- QMK: KC_P -->
+            <key code="12"  output="q"/>            <!-- q -->                                                    <!-- QMK: KC_Q -->
+            <key code="15"  output="r"/>            <!-- r -->                                                    <!-- QMK: KC_R -->
+            <key code="1"   output="s"/>            <!-- s -->                                                    <!-- QMK: KC_S -->
+            <key code="17"  output="t"/>            <!-- t -->                                                    <!-- QMK: KC_T -->
+            <key code="32"  output="u"/>            <!-- u -->                                                    <!-- QMK: KC_U -->
+            <key code="9"   output="v"/>            <!-- v -->                                                    <!-- QMK: KC_V -->
+            <key code="13"  output="w"/>            <!-- w -->                                                    <!-- QMK: KC_W -->
+            <key code="7"   output="x"/>            <!-- x -->                                                    <!-- QMK: KC_X -->
+            <key code="16"  output="y"/>            <!-- y -->                                                    <!-- QMK: KC_Y -->
+            <key code="6"   output="z"/>            <!-- z -->                                                    <!-- QMK: KC_Z -->
+
+            <key code="29"  output="0"/>            <!-- 0 -->                                                    <!-- QMK: KC_0 -->
+            <key code="18"  output="1"/>            <!-- 1 -->                                                    <!-- QMK: KC_1 -->
+            <key code="19"  output="2"/>            <!-- 2 -->                                                    <!-- QMK: KC_2 -->
+            <key code="20"  output="3"/>            <!-- 3 -->                                                    <!-- QMK: KC_3 -->
+            <key code="21"  output="4"/>            <!-- 4 -->                                                    <!-- QMK: KC_4 -->
+            <key code="23"  output="5"/>            <!-- 5 -->                                                    <!-- QMK: KC_5 -->
+            <key code="22"  output="6"/>            <!-- 6 -->                                                    <!-- QMK: KC_6 -->
+            <key code="26"  output="7"/>            <!-- 7 -->                                                    <!-- QMK: KC_7 -->
+            <key code="28"  output="8"/>            <!-- 8 -->                                                    <!-- QMK: KC_8 -->
+            <key code="25"  output="9"/>            <!-- 9 -->                                                    <!-- QMK: KC_9 -->
+
+            <key code="27"  output="-"/>            <!-- Hyphen-Minus -->                                         <!-- QMK: KC_MINUS -->
+            <key code="44"  output="/"/>            <!-- Solidus -->                                              <!-- QMK: KC_SLASH -->
+            <key code="42"  output="\"/>            <!-- Reverse Solidus -->                                      <!-- QMK: KC_BACKSLASH -->
+            <key code="24"  output="="/>            <!-- Equals Sign -->                                          <!-- QMK: KC_EQUAL -->
+            <key code="33"  output="["/>            <!-- Left Square Bracket -->                                  <!-- QMK: KC_LEFT_BRACKET -->
+            <key code="30"  output="]"/>            <!-- Right Square Bracket -->                                 <!-- QMK: KC_RIGHT_BRACKET -->
+            <key code="43"  output=","/>            <!-- Comma -->                                                <!-- QMK: KC_COMMA -->
+            <key code="47"  output="."/>            <!-- Full Stop -->                                            <!-- QMK: KC_DOT -->
+            <key code="41"  output=";"/>            <!-- Semicolon -->                                            <!-- QMK: KC_SEMICOLON -->
+            <key code="39"  output="&#x0027;"/>     <!-- Apostrophe -->                                           <!-- QMK: KC_QUOTE -->
+            <key code="50"  output="`"/>            <!-- Grave Accent -->                                         <!-- QMK: KC_GRAVE -->
+
+            <key code="49"  output=" "/>            <!-- Space (SP) -->                                           <!-- QMK: KC_SPACE -->
+            <key code="51"  output="&#x0008;"/>     <!-- Backspace (BS) -->                                       <!-- QMK: KC_BACKSPACE -->
+            <key code="36"  output="&#x000D;"/>     <!-- Carriage Return (CR) -->                                 <!-- QMK: KC_ENTER -->
+            <key code="48"  output="&#x0009;"/>     <!-- Character Tabulation (HT, TAB) -->                       <!-- QMK: KC_TAB -->
+            <key code="53"  output="&#x001B;"/>     <!-- Escape (ESC) -->                                         <!-- QMK: KC_ESCAPE -->
+
+            <key code="70"  output="&#x001C;"/>     <!-- File Separator (FS): Numpad Arrow Left -->
+            <key code="66"  output="&#x001D;"/>     <!-- Group Separator (GS): Numpad Arrow Right -->
+            <key code="77"  output="&#x001E;"/>     <!-- Information Separator Two (RS): Numpad Arrow Up -->
+            <key code="72"  output="&#x001F;"/>     <!-- Information Separator One (US): Numpad Arrow Down -->
+            <key code="69"  output="+"/>            <!-- Numpad Plus Sign -->                                     <!-- QMK: KC_KP_PLUS -->
+            <key code="78"  output="-"/>            <!-- Numpad Hyphen-Minus -->                                  <!-- QMK: KC_KP_MINUS -->
+            <key code="67"  output="*"/>            <!-- Numpad Asterisk -->                                      <!-- QMK: KC_KP_ASTERISK -->
+            <key code="75"  output="/"/>            <!-- Numpad Solidus -->                                       <!-- QMK: KC_KP_SLASH -->
+            <key code="81"  output="="/>            <!-- Numpad Equals Sign -->                                   <!-- QMK: KC_KP_EQUAL -->
+            <key code="71"  output="&#x001B;"/>     <!-- Escape (ESC): Numpad Escape? -->
+            <key code="64"  output="&#x0010;"/>     <!-- Data Link Escape, Unknown (Num Lock?) -->                <!-- QMK: KC_NUM_LOCK -->
+            <key code="76"  output="&#x0003;"/>     <!-- End of Text (ETX): Numpad Enter -->                      <!-- QMK: KC_KP_ENTER -->
+            <key code="82"  output="0"/>            <!-- Numpad 0 -->                                             <!-- QMK: KC_KP_0 -->
+            <key code="83"  output="1"/>            <!-- Numpad 1 -->                                             <!-- QMK: KC_KP_1 -->
+            <key code="84"  output="2"/>            <!-- Numpad 2 -->                                             <!-- QMK: KC_KP_2 -->
+            <key code="85"  output="3"/>            <!-- Numpad 3 -->                                             <!-- QMK: KC_KP_3 -->
+            <key code="86"  output="4"/>            <!-- Numpad 4 -->                                             <!-- QMK: KC_KP_4 -->
+            <key code="87"  output="5"/>            <!-- Numpad 5 -->                                             <!-- QMK: KC_KP_5 -->
+            <key code="88"  output="6"/>            <!-- Numpad 6 -->                                             <!-- QMK: KC_KP_6 -->
+            <key code="89"  output="7"/>            <!-- Numpad 7 -->                                             <!-- QMK: KC_KP_7 -->
+            <key code="91"  output="8"/>            <!-- Numpad 8 -->                                             <!-- QMK: KC_KP_8 -->
+            <key code="92"  output="9"/>            <!-- Numpad 9 -->                                             <!-- QMK: KC_KP_9 -->
+
+            <key code="122" output="&#x0010;"/>     <!-- Data Link Escape (DLE): F1 -->                           <!-- QMK: KC_F1 -->
+            <key code="120" output="&#x0010;"/>     <!-- Data Link Escape (DLE): F2 -->                           <!-- QMK: KC_F2 -->
+            <key code="99"  output="&#x0010;"/>     <!-- Data Link Escape (DLE): F3 -->                           <!-- QMK: KC_F3 -->
+            <key code="118" output="&#x0010;"/>     <!-- Data Link Escape (DLE): F4 -->                           <!-- QMK: KC_F4 -->
+            <key code="96"  output="&#x0010;"/>     <!-- Data Link Escape (DLE): F5 -->                           <!-- QMK: KC_F5 -->
+            <key code="97"  output="&#x0010;"/>     <!-- Data Link Escape (DLE): F6 -->                           <!-- QMK: KC_F6 -->
+            <key code="98"  output="&#x0010;"/>     <!-- Data Link Escape (DLE): F7 -->                           <!-- QMK: KC_F7 -->
+            <key code="100" output="&#x0010;"/>     <!-- Data Link Escape (DLE): F8 -->                           <!-- QMK: KC_F8 -->
+            <key code="101" output="&#x0010;"/>     <!-- Data Link Escape (DLE): F9 -->                           <!-- QMK: KC_F9 -->
+            <key code="109" output="&#x0010;"/>     <!-- Data Link Escape (DLE): F10 -->                          <!-- QMK: KC_F10 -->
+            <key code="103" output="&#x0010;"/>     <!-- Data Link Escape (DLE): F11 -->                          <!-- QMK: KC_F11 -->
+            <key code="111" output="&#x0010;"/>     <!-- Data Link Escape (DLE): F12 -->                          <!-- QMK: KC_F12 -->
+            <key code="105" output="&#x0010;"/>     <!-- Data Link Escape (DLE): F13 -->                          <!-- QMK: KC_F13 -->
+            <key code="107" output="&#x0010;"/>     <!-- Data Link Escape (DLE): F14 -->                          <!-- QMK: KC_F14 -->
+            <key code="113" output="&#x0010;"/>     <!-- Data Link Escape (DLE): F15 -->                          <!-- QMK: KC_F15 -->
+            <key code="106" output="&#x0010;"/>     <!-- Data Link Escape (DLE): F16 -->                          <!-- QMK: KC_F16 -->
+
+            <key code="114" output="&#x0005;"/>     <!-- Enquiry (ENQ): Help -->                                  <!-- QMK: KC_HELP -->
+            <key code="117" output="&#x007F;"/>     <!-- Delete (DEL) -->                                         <!-- QMK: KC_DELETE -->
+            <key code="115" output="&#x0001;"/>     <!-- Start of Heading (SOH): Home -->                         <!-- QMK: KC_HOME -->
+            <key code="119" output="&#x0004;"/>     <!-- End of Transmission (EOT): End -->                       <!-- QMK: KC_END -->
+            <key code="116" output="&#x000B;"/>     <!-- Line Tabulation (VT): Page Up -->                        <!-- QMK: KC_PAGE_UP -->
+            <key code="121" output="&#x000C;"/>     <!-- Form Feed (FF): Page Down -->                            <!-- QMK: KC_PAGE_DOWN -->
+
+            <key code="123" output="&#x001C;"/>     <!-- File Separator (FS): Arrow Left -->                      <!-- QMK: KC_LEFT -->
+            <key code="124" output="&#x001D;"/>     <!-- Group Separator (GS): Arrow Right -->                    <!-- QMK: KC_RIGHT -->
+            <key code="126" output="&#x001E;"/>     <!-- Information Separator Two (RS): Arrow Up -->             <!-- QMK: KC_UP -->
+            <key code="125" output="&#x001F;"/>     <!-- Information Separator One (US): Arrow Down -->           <!-- QMK: KC_DOWN -->
+
+            <key code="10"  output=""/>             <!-- Empty -->
+            <key code="65"  output=""/>             <!-- Empty -->
                                                     <!-- Missing key code: 52 -->
-            <key code="53" output="&#x001B;"/>      <!-- Escape (ESC) -->                                         <!-- QMK: KC_ESCAPE -->
                                                     <!-- Missing key code: 54 -->
                                                     <!-- Missing key code: 55 -->
                                                     <!-- Missing key code: 56 -->
@@ -127,724 +178,886 @@
                                                     <!-- Missing key code: 61 -->
                                                     <!-- Missing key code: 62 -->
                                                     <!-- Missing key code: 63 -->
-            <key code="64" output="&#x0010;"/>      <!-- Data Link Escape, Unknown (Num Lock?) -->                <!-- QMK: KC_NUM_LOCK -->
-            <key code="65" output=""/>              <!-- Empty -->
-            <key code="66" output="&#x001D;"/>      <!-- Group Separator (GS): Numpad Arrow Right -->             <!-- QMK:  -->
-            <key code="67" output="*"/>             <!-- Numpad Asterisk -->                                      <!-- QMK: KC_KP_ASTERISK -->
                                                     <!-- Missing key code: 68 -->
-            <key code="69" output="+"/>             <!-- Numpad Plus Sign -->                                     <!-- QMK: KC_KP_PLUS -->
-            <key code="70" output="&#x001C;"/>      <!-- File Separator (FS): Numpad Arrow Left -->               <!-- QMK:  -->
-            <key code="71" output="&#x001B;"/>      <!-- Escape (ESC): Numpad Escape? -->                         <!-- QMK:  -->
-            <key code="72" output="&#x001F;"/>      <!-- Information Separator One (US): Numpad Arrow Down -->    <!-- QMK:  -->
                                                     <!-- Missing key code: 73 -->
                                                     <!-- Missing key code: 74 -->
-            <key code="75" output="/"/>             <!-- Numpad Solidus -->                                       <!-- QMK: KC_KP_SLASH -->
-            <key code="76" output="&#x0003;"/>      <!-- End of Text (ETX): Numpad Enter -->                      <!-- QMK: KC_KP_ENTER -->
-            <key code="77" output="&#x001E;"/>      <!-- Information Separator Two (RS): Numpad Arrow Up -->      <!-- QMK:  -->
-            <key code="78" output="-"/>             <!-- Numpad Hyphen-Minus -->                                  <!-- QMK: KC_KP_MINUS -->
-            <key code="79" output="&#x0010;"/>      <!-- Unknown: Data Link Escape (DLE) -->
-            <key code="80" output="&#x0010;"/>      <!-- Unknown: Data Link Escape (DLE) -->
-            <key code="81" output="="/>             <!-- Numpad Equals Sign -->                                   <!-- QMK: KC_KP_EQUAL -->
-            <key code="82" output="0"/>             <!-- Numpad 0 -->                                             <!-- QMK: KC_KP_0 -->
-            <key code="83" output="1"/>             <!-- Numpad 1 -->                                             <!-- QMK: KC_KP_1 -->
-            <key code="84" output="2"/>             <!-- Numpad 2 -->                                             <!-- QMK: KC_KP_2 -->
-            <key code="85" output="3"/>             <!-- Numpad 3 -->                                             <!-- QMK: KC_KP_3 -->
-            <key code="86" output="4"/>             <!-- Numpad 4 -->                                             <!-- QMK: KC_KP_4 -->
-            <key code="87" output="5"/>             <!-- Numpad 5 -->                                             <!-- QMK: KC_KP_5 -->
-            <key code="88" output="6"/>             <!-- Numpad 6 -->                                             <!-- QMK: KC_KP_6 -->
-            <key code="89" output="7"/>             <!-- Numpad 7 -->                                             <!-- QMK: KC_KP_7 -->
                                                     <!-- Missing key code: 90 -->
-            <key code="91" output="8"/>             <!-- Numpad 8 -->                                             <!-- QMK: KC_KP_8 -->
-            <key code="92" output="9"/>             <!-- Numpad 9 -->                                             <!-- QMK: KC_KP_9 -->
                                                     <!-- Missing key code: 93 -->
                                                     <!-- Missing key code: 94 -->
                                                     <!-- Missing key code: 95 -->
-            <key code="96" output="&#x0010;"/>      <!-- Data Link Escape (DLE): F5 -->                           <!-- QMK: KC_F5 -->
-            <key code="97" output="&#x0010;"/>      <!-- Data Link Escape (DLE): F6 -->                           <!-- QMK: KC_F6 -->
-            <key code="98" output="&#x0010;"/>      <!-- Data Link Escape (DLE): F7 -->                           <!-- QMK: KC_F7 -->
-            <key code="99" output="&#x0010;"/>      <!-- Data Link Escape (DLE): F3 -->                           <!-- QMK: KC_F3 -->
-            <key code="100" output="&#x0010;"/>     <!-- Data Link Escape (DLE): F8 -->                           <!-- QMK: KC_F8 -->
-            <key code="101" output="&#x0010;"/>     <!-- Data Link Escape (DLE): F9 -->                           <!-- QMK: KC_F9 -->
+            <key code="79"  output="&#x0010;"/>     <!-- Unknown: Data Link Escape (DLE) -->
+            <key code="80"  output="&#x0010;"/>     <!-- Unknown: Data Link Escape (DLE) -->
                                                     <!-- Missing key code: 102 -->
-            <key code="103" output="&#x0010;"/>     <!-- Data Link Escape (DLE): F11 -->                          <!-- QMK: KC_F11 -->
                                                     <!-- Missing key code: 104 -->
-            <key code="105" output="&#x0010;"/>     <!-- Data Link Escape (DLE): F13 -->                          <!-- QMK: KC_F13 -->
-            <key code="106" output="&#x0010;"/>     <!-- Data Link Escape (DLE): F16 -->                          <!-- QMK: KC_F16 -->
-            <key code="107" output="&#x0010;"/>     <!-- Data Link Escape (DLE): F14 -->                          <!-- QMK: KC_F14 -->
                                                     <!-- Missing key code: 108 -->
-            <key code="109" output="&#x0010;"/>     <!-- Data Link Escape (DLE): F10 -->                          <!-- QMK: KC_F10 -->
                                                     <!-- Missing key code: 110 -->
-            <key code="111" output="&#x0010;"/>     <!-- Data Link Escape (DLE): F12 -->                          <!-- QMK: KC_F12 -->
                                                     <!-- Missing key code: 112 -->
-            <key code="113" output="&#x0010;"/>     <!-- Data Link Escape (DLE): F15 -->                          <!-- QMK: KC_F15 -->
-            <key code="114" output="&#x0005;"/>     <!-- Enquiry (ENQ): Help -->                                  <!-- QMK: KC_HELP -->
-            <key code="115" output="&#x0001;"/>     <!-- Start of Heading (SOH): Home -->                         <!-- QMK: KC_HOME -->
-            <key code="116" output="&#x000B;"/>     <!-- Line Tabulation (VT): Page Up -->                        <!-- QMK: KC_PAGE_UP -->
-            <key code="117" output="&#x007F;"/>     <!-- Delete (DEL) -->                                         <!-- QMK: KC_DELETE -->
-            <key code="118" output="&#x0010;"/>     <!-- Data Link Escape (DLE): F4 -->                           <!-- QMK: KC_F4 -->
-            <key code="119" output="&#x0004;"/>     <!-- End of Transmission (EOT): End -->                       <!-- QMK: KC_END -->
-            <key code="120" output="&#x0010;"/>     <!-- Data Link Escape (DLE): F2 -->                           <!-- QMK: KC_F2 -->
-            <key code="121" output="&#x000C;"/>     <!-- Form Feed (FF): Page Down -->                            <!-- QMK: KC_PAGE_DOWN -->
-            <key code="122" output="&#x0010;"/>     <!-- Data Link Escape (DLE): F1 -->                           <!-- QMK: KC_F1 -->
-            <key code="123" output="&#x001C;"/>     <!-- File Separator (FS): Arrow Left -->                      <!-- QMK: KC_LEFT -->
-            <key code="124" output="&#x001D;"/>     <!-- Group Separator (GS): Arrow Right -->                    <!-- QMK: KC_RIGHT -->
-            <key code="125" output="&#x001F;"/>     <!-- Information Separator One (US): Arrow Down -->           <!-- QMK: KC_DOWN -->
-            <key code="126" output="&#x001E;"/>     <!-- Information Separator Two (RS): Arrow Up -->             <!-- QMK: KC_UP -->
                                                     <!-- Missing key code: 127 -->
         </keyMap>
+
+
+
+
+        <!-- Command -->
         <keyMap index="1">
+            <key code="0"   output="a"/>            <!-- a -->                                                    <!-- QMK: KC_A -->
+            <key code="11"  output="b"/>            <!-- b -->                                                    <!-- QMK: KC_B -->
+            <key code="8"   output="c"/>            <!-- c -->                                                    <!-- QMK: KC_C -->
+            <key code="2"   output="d"/>            <!-- d -->                                                    <!-- QMK: KC_D -->
+            <key code="14"  output="e"/>            <!-- e -->                                                    <!-- QMK: KC_E -->
+            <key code="3"   output="f"/>            <!-- f -->                                                    <!-- QMK: KC_F -->
+            <key code="5"   output="g"/>            <!-- g -->                                                    <!-- QMK: KC_G -->
+            <key code="4"   output="h"/>            <!-- h -->                                                    <!-- QMK: KC_H -->
+            <key code="34"  output="i"/>            <!-- i -->                                                    <!-- QMK: KC_I -->
+            <key code="38"  output="j"/>            <!-- j -->                                                    <!-- QMK: KC_J -->
+            <key code="40"  output="k"/>            <!-- k -->                                                    <!-- QMK: KC_K -->
+            <key code="37"  output="l"/>            <!-- l -->                                                    <!-- QMK: KC_L -->
+            <key code="46"  output="m"/>            <!-- m -->                                                    <!-- QMK: KC_M -->
+            <key code="45"  output="n"/>            <!-- n -->                                                    <!-- QMK: KC_N -->
+            <key code="31"  output="o"/>            <!-- o -->                                                    <!-- QMK: KC_O -->
+            <key code="35"  output="p"/>            <!-- p -->                                                    <!-- QMK: KC_P -->
+            <key code="12"  output="q"/>            <!-- q -->                                                    <!-- QMK: KC_Q -->
+            <key code="15"  output="r"/>            <!-- r -->                                                    <!-- QMK: KC_R -->
+            <key code="1"   output="s"/>            <!-- s -->                                                    <!-- QMK: KC_S -->
+            <key code="17"  output="t"/>            <!-- t -->                                                    <!-- QMK: KC_T -->
+            <key code="32"  output="u"/>            <!-- u -->                                                    <!-- QMK: KC_U -->
+            <key code="9"   output="v"/>            <!-- v -->                                                    <!-- QMK: KC_V -->
+            <key code="13"  output="w"/>            <!-- w -->                                                    <!-- QMK: KC_W -->
+            <key code="7"   output="x"/>            <!-- x -->                                                    <!-- QMK: KC_X -->
+            <key code="16"  output="y"/>            <!-- y -->                                                    <!-- QMK: KC_Y -->
+            <key code="6"   output="z"/>            <!-- z -->                                                    <!-- QMK: KC_Z -->
 
-            <!-- Modifier keys: Shift -->
+            <key code="29"  output="0"/>            <!-- 0 -->                                                    <!-- QMK: KC_0 -->
+            <key code="18"  output="1"/>            <!-- 1 -->                                                    <!-- QMK: KC_1 -->
+            <key code="19"  output="2"/>            <!-- 2 -->                                                    <!-- QMK: KC_2 -->
+            <key code="20"  output="3"/>            <!-- 3 -->                                                    <!-- QMK: KC_3 -->
+            <key code="21"  output="4"/>            <!-- 4 -->                                                    <!-- QMK: KC_4 -->
+            <key code="23"  output="5"/>            <!-- 5 -->                                                    <!-- QMK: KC_5 -->
+            <key code="22"  output="6"/>            <!-- 6 -->                                                    <!-- QMK: KC_6 -->
+            <key code="26"  output="7"/>            <!-- 7 -->                                                    <!-- QMK: KC_7 -->
+            <key code="28"  output="8"/>            <!-- 8 -->                                                    <!-- QMK: KC_8 -->
+            <key code="25"  output="9"/>            <!-- 9 -->                                                    <!-- QMK: KC_9 -->
 
-            <key code="0" output="A"/>
-            <key code="1" output="S"/>
-            <key code="2" output="D"/>
-            <key code="3" output="F"/>
-            <key code="4" output="H"/>
-            <key code="5" output="G"/>
-            <key code="6" output="Z"/>
-            <key code="7" output="X"/>
-            <key code="8" output="C"/>
-            <key code="9" output="V"/>
-            <key code="10" output=""/>
-            <key code="11" output="B"/>
-            <key code="12" output="Q"/>
-            <key code="13" output="W"/>
-            <key code="14" output="E"/>
-            <key code="15" output="R"/>
-            <key code="16" output="Y"/>
-            <key code="17" output="T"/>
-            <key code="18" output="!"/>
-            <key code="19" output="@"/>
-            <key code="20" output="#"/>
-            <key code="21" output="$"/>
-            <key code="22" output="^"/>
-            <key code="23" output="%"/>
-            <key code="24" output="+"/>
-            <key code="25" output="("/>
-            <key code="26" output="&#x0026;"/>
-            <key code="27" output="_"/>
-            <key code="28" output="*"/>
-            <key code="29" output=")"/>
-            <key code="30" output="}"/>
-            <key code="31" output="O"/>
-            <key code="32" output="U"/>
-            <key code="33" output="{"/>
-            <key code="34" output="I"/>
-            <key code="35" output="P"/>
-            <key code="36" output="&#x000D;"/>
-            <key code="37" output="L"/>
-            <key code="38" output="J"/>
-            <key code="39" output="&#x0022;"/>
-            <key code="40" output="K"/>
-            <key code="41" output=":"/>
-            <key code="42" output="|"/>
-            <key code="43" output="&#x003C;"/>
-            <key code="44" output="?"/>
-            <key code="45" output="N"/>
-            <key code="46" output="M"/>
-            <key code="47" output="&#x003E;"/>
-            <key code="48" output="&#x0009;"/>
-            <key code="49" output=" "/>
-            <key code="50" output="~"/>
-            <key code="51" output="&#x0008;"/>
-            <key code="53" output="&#x001B;"/>
-            <key code="64" output="&#x0010;"/>
-            <key code="65" output=""/>
-            <key code="66" output="&#x001D;"/>
-            <key code="67" output=""/>
-            <key code="69" output=""/>
-            <key code="70" output="&#x001C;"/>
-            <key code="71" output="&#x001B;"/>
-            <key code="72" output="&#x001F;"/>
-            <key code="75" output=""/>
-            <key code="76" output="&#x0003;"/>
-            <key code="77" output="&#x001E;"/>
-            <key code="78" output=""/>
-            <key code="79" output="&#x0010;"/>
-            <key code="80" output="&#x0010;"/>
-            <key code="81" output=""/>
-            <key code="82" output="0"/>
-            <key code="83" output="1"/>
-            <key code="84" output="2"/>
-            <key code="85" output="3"/>
-            <key code="86" output="4"/>
-            <key code="87" output="5"/>
-            <key code="88" output="6"/>
-            <key code="89" output="7"/>
-            <key code="91" output="8"/>
-            <key code="92" output="9"/>
-            <key code="96" output="&#x0010;"/>
-            <key code="97" output="&#x0010;"/>
-            <key code="98" output="&#x0010;"/>
-            <key code="99" output="&#x0010;"/>
-            <key code="100" output="&#x0010;"/>
-            <key code="101" output="&#x0010;"/>
-            <key code="103" output="&#x0010;"/>
-            <key code="105" output="&#x0010;"/>
-            <key code="106" output="&#x0010;"/>
-            <key code="107" output="&#x0010;"/>
-            <key code="109" output="&#x0010;"/>
-            <key code="111" output="&#x0010;"/>
-            <key code="113" output="&#x0010;"/>
-            <key code="114" output="&#x0005;"/>
-            <key code="115" output="&#x0001;"/>
-            <key code="116" output="&#x000B;"/>
-            <key code="117" output="&#x007F;"/>
-            <key code="118" output="&#x0010;"/>
-            <key code="119" output="&#x0004;"/>
-            <key code="120" output="&#x0010;"/>
-            <key code="121" output="&#x000C;"/>
-            <key code="122" output="&#x0010;"/>
-            <key code="123" output="&#x001C;"/>
-            <key code="124" output="&#x001D;"/>
-            <key code="125" output="&#x001F;"/>
-            <key code="126" output="&#x001E;"/>
+            <key code="27"  output="-"/>            <!-- Hyphen-Minus -->                                         <!-- QMK: KC_MINUS -->
+            <key code="44"  output="/"/>            <!-- Solidus -->                                              <!-- QMK: KC_SLASH -->
+            <key code="42"  output="\"/>            <!-- Reverse Solidus -->                                      <!-- QMK: KC_BACKSLASH -->
+            <key code="24"  output="="/>            <!-- Equals Sign -->                                          <!-- QMK: KC_EQUAL -->
+            <key code="33"  output="["/>            <!-- Left Square Bracket -->                                  <!-- QMK: KC_LEFT_BRACKET -->
+            <key code="30"  output="]"/>            <!-- Right Square Bracket -->                                 <!-- QMK: KC_RIGHT_BRACKET -->
+            <key code="43"  output=","/>            <!-- Comma -->                                                <!-- QMK: KC_COMMA -->
+            <key code="47"  output="."/>            <!-- Full Stop -->                                            <!-- QMK: KC_DOT -->
+            <key code="41"  output=";"/>            <!-- Semicolon -->                                            <!-- QMK: KC_SEMICOLON -->
+            <key code="39"  output="&#x0027;"/>     <!-- Apostrophe -->                                           <!-- QMK: KC_QUOTE -->
+            <key code="50"  output="`"/>            <!-- Grave Accent -->                                         <!-- QMK: KC_GRAVE -->
+
+            <key code="49"  output=" "/>            <!-- Space (SP) -->                                           <!-- QMK: KC_SPACE -->
+            <key code="51"  output="&#x0008;"/>     <!-- Backspace (BS) -->                                       <!-- QMK: KC_BACKSPACE -->
+            <key code="36"  output="&#x000D;"/>     <!-- Carriage Return (CR) -->                                 <!-- QMK: KC_ENTER -->
+            <key code="48"  output="&#x0009;"/>     <!-- Character Tabulation (HT, TAB) -->                       <!-- QMK: KC_TAB -->
+            <key code="53"  output="&#x001B;"/>     <!-- Escape (ESC) -->                                         <!-- QMK: KC_ESCAPE -->
+
+            <key code="70"  output="&#x001C;"/>     <!-- File Separator (FS): Numpad Arrow Left -->
+            <key code="66"  output="&#x001D;"/>     <!-- Group Separator (GS): Numpad Arrow Right -->
+            <key code="77"  output="&#x001E;"/>     <!-- Information Separator Two (RS): Numpad Arrow Up -->
+            <key code="72"  output="&#x001F;"/>     <!-- Information Separator One (US): Numpad Arrow Down -->
+            <key code="69"  output="+"/>            <!-- Numpad Plus Sign -->                                     <!-- QMK: KC_KP_PLUS -->
+            <key code="78"  output="-"/>            <!-- Numpad Hyphen-Minus -->                                  <!-- QMK: KC_KP_MINUS -->
+            <key code="67"  output="*"/>            <!-- Numpad Asterisk -->                                      <!-- QMK: KC_KP_ASTERISK -->
+            <key code="75"  output="/"/>            <!-- Numpad Solidus -->                                       <!-- QMK: KC_KP_SLASH -->
+            <key code="81"  output="="/>            <!-- Numpad Equals Sign -->                                   <!-- QMK: KC_KP_EQUAL -->
+            <key code="71"  output="&#x001B;"/>     <!-- Escape (ESC): Numpad Escape? -->
+            <key code="64"  output="&#x0010;"/>     <!-- Data Link Escape, Unknown (Num Lock?) -->                <!-- QMK: KC_NUM_LOCK -->
+            <key code="76"  output="&#x0003;"/>     <!-- End of Text (ETX): Numpad Enter -->                      <!-- QMK: KC_KP_ENTER -->
+            <key code="82"  output="0"/>            <!-- Numpad 0 -->                                             <!-- QMK: KC_KP_0 -->
+            <key code="83"  output="1"/>            <!-- Numpad 1 -->                                             <!-- QMK: KC_KP_1 -->
+            <key code="84"  output="2"/>            <!-- Numpad 2 -->                                             <!-- QMK: KC_KP_2 -->
+            <key code="85"  output="3"/>            <!-- Numpad 3 -->                                             <!-- QMK: KC_KP_3 -->
+            <key code="86"  output="4"/>            <!-- Numpad 4 -->                                             <!-- QMK: KC_KP_4 -->
+            <key code="87"  output="5"/>            <!-- Numpad 5 -->                                             <!-- QMK: KC_KP_5 -->
+            <key code="88"  output="6"/>            <!-- Numpad 6 -->                                             <!-- QMK: KC_KP_6 -->
+            <key code="89"  output="7"/>            <!-- Numpad 7 -->                                             <!-- QMK: KC_KP_7 -->
+            <key code="91"  output="8"/>            <!-- Numpad 8 -->                                             <!-- QMK: KC_KP_8 -->
+            <key code="92"  output="9"/>            <!-- Numpad 9 -->                                             <!-- QMK: KC_KP_9 -->
+
+            <key code="122" output="&#x0010;"/>     <!-- Data Link Escape (DLE): F1 -->                           <!-- QMK: KC_F1 -->
+            <key code="120" output="&#x0010;"/>     <!-- Data Link Escape (DLE): F2 -->                           <!-- QMK: KC_F2 -->
+            <key code="99"  output="&#x0010;"/>     <!-- Data Link Escape (DLE): F3 -->                           <!-- QMK: KC_F3 -->
+            <key code="118" output="&#x0010;"/>     <!-- Data Link Escape (DLE): F4 -->                           <!-- QMK: KC_F4 -->
+            <key code="96"  output="&#x0010;"/>     <!-- Data Link Escape (DLE): F5 -->                           <!-- QMK: KC_F5 -->
+            <key code="97"  output="&#x0010;"/>     <!-- Data Link Escape (DLE): F6 -->                           <!-- QMK: KC_F6 -->
+            <key code="98"  output="&#x0010;"/>     <!-- Data Link Escape (DLE): F7 -->                           <!-- QMK: KC_F7 -->
+            <key code="100" output="&#x0010;"/>     <!-- Data Link Escape (DLE): F8 -->                           <!-- QMK: KC_F8 -->
+            <key code="101" output="&#x0010;"/>     <!-- Data Link Escape (DLE): F9 -->                           <!-- QMK: KC_F9 -->
+            <key code="109" output="&#x0010;"/>     <!-- Data Link Escape (DLE): F10 -->                          <!-- QMK: KC_F10 -->
+            <key code="103" output="&#x0010;"/>     <!-- Data Link Escape (DLE): F11 -->                          <!-- QMK: KC_F11 -->
+            <key code="111" output="&#x0010;"/>     <!-- Data Link Escape (DLE): F12 -->                          <!-- QMK: KC_F12 -->
+            <key code="105" output="&#x0010;"/>     <!-- Data Link Escape (DLE): F13 -->                          <!-- QMK: KC_F13 -->
+            <key code="107" output="&#x0010;"/>     <!-- Data Link Escape (DLE): F14 -->                          <!-- QMK: KC_F14 -->
+            <key code="113" output="&#x0010;"/>     <!-- Data Link Escape (DLE): F15 -->                          <!-- QMK: KC_F15 -->
+            <key code="106" output="&#x0010;"/>     <!-- Data Link Escape (DLE): F16 -->                          <!-- QMK: KC_F16 -->
+
+            <key code="114" output="&#x0005;"/>     <!-- Enquiry (ENQ): Help -->                                  <!-- QMK: KC_HELP -->
+            <key code="117" output="&#x007F;"/>     <!-- Delete (DEL) -->                                         <!-- QMK: KC_DELETE -->
+            <key code="115" output="&#x0001;"/>     <!-- Start of Heading (SOH): Home -->                         <!-- QMK: KC_HOME -->
+            <key code="119" output="&#x0004;"/>     <!-- End of Transmission (EOT): End -->                       <!-- QMK: KC_END -->
+            <key code="116" output="&#x000B;"/>     <!-- Line Tabulation (VT): Page Up -->                        <!-- QMK: KC_PAGE_UP -->
+            <key code="121" output="&#x000C;"/>     <!-- Form Feed (FF): Page Down -->                            <!-- QMK: KC_PAGE_DOWN -->
+
+            <key code="123" output="&#x001C;"/>     <!-- File Separator (FS): Arrow Left -->                      <!-- QMK: KC_LEFT -->
+            <key code="124" output="&#x001D;"/>     <!-- Group Separator (GS): Arrow Right -->                    <!-- QMK: KC_RIGHT -->
+            <key code="126" output="&#x001E;"/>     <!-- Information Separator Two (RS): Arrow Up -->             <!-- QMK: KC_UP -->
+            <key code="125" output="&#x001F;"/>     <!-- Information Separator One (US): Arrow Down -->           <!-- QMK: KC_DOWN -->
+
+            <key code="10"  output=""/>             <!-- Empty -->
+            <key code="65"  output=""/>             <!-- Empty -->
+                                                    <!-- Missing key code: 52 -->
+                                                    <!-- Missing key code: 54 -->
+                                                    <!-- Missing key code: 55 -->
+                                                    <!-- Missing key code: 56 -->
+                                                    <!-- Missing key code: 57 -->
+                                                    <!-- Missing key code: 58 -->
+                                                    <!-- Missing key code: 59 -->
+                                                    <!-- Missing key code: 60 -->
+                                                    <!-- Missing key code: 61 -->
+                                                    <!-- Missing key code: 62 -->
+                                                    <!-- Missing key code: 63 -->
+                                                    <!-- Missing key code: 68 -->
+                                                    <!-- Missing key code: 73 -->
+                                                    <!-- Missing key code: 74 -->
+                                                    <!-- Missing key code: 90 -->
+                                                    <!-- Missing key code: 93 -->
+                                                    <!-- Missing key code: 94 -->
+                                                    <!-- Missing key code: 95 -->
+            <key code="79"  output="&#x0010;"/>     <!-- Unknown: Data Link Escape (DLE) -->
+            <key code="80"  output="&#x0010;"/>     <!-- Unknown: Data Link Escape (DLE) -->
+                                                    <!-- Missing key code: 102 -->
+                                                    <!-- Missing key code: 104 -->
+                                                    <!-- Missing key code: 108 -->
+                                                    <!-- Missing key code: 110 -->
+                                                    <!-- Missing key code: 112 -->
+                                                    <!-- Missing key code: 127 -->
         </keyMap>
+
+
+
+
+        <!-- Caps Lock -->
         <keyMap index="2">
+            <key code="0"   output="A"/>            <!-- * a -->                                                  <!-- QMK: KC_A -->
+            <key code="11"  output="B"/>            <!-- * b -->                                                  <!-- QMK: KC_B -->
+            <key code="8"   output="C"/>            <!-- * c -->                                                  <!-- QMK: KC_C -->
+            <key code="2"   output="D"/>            <!-- * d -->                                                  <!-- QMK: KC_D -->
+            <key code="14"  output="E"/>            <!-- * e -->                                                  <!-- QMK: KC_E -->
+            <key code="3"   output="F"/>            <!-- * f -->                                                  <!-- QMK: KC_F -->
+            <key code="5"   output="G"/>            <!-- * g -->                                                  <!-- QMK: KC_G -->
+            <key code="4"   output="H"/>            <!-- * h -->                                                  <!-- QMK: KC_H -->
+            <key code="34"  output="I"/>            <!-- * i -->                                                  <!-- QMK: KC_I -->
+            <key code="38"  output="J"/>            <!-- * j -->                                                  <!-- QMK: KC_J -->
+            <key code="40"  output="K"/>            <!-- * k -->                                                  <!-- QMK: KC_K -->
+            <key code="37"  output="L"/>            <!-- * l -->                                                  <!-- QMK: KC_L -->
+            <key code="46"  output="M"/>            <!-- * m -->                                                  <!-- QMK: KC_M -->
+            <key code="45"  output="N"/>            <!-- * n -->                                                  <!-- QMK: KC_N -->
+            <key code="31"  output="O"/>            <!-- * o -->                                                  <!-- QMK: KC_O -->
+            <key code="35"  output="P"/>            <!-- * p -->                                                  <!-- QMK: KC_P -->
+            <key code="12"  output="Q"/>            <!-- * q -->                                                  <!-- QMK: KC_Q -->
+            <key code="15"  output="R"/>            <!-- * r -->                                                  <!-- QMK: KC_R -->
+            <key code="1"   output="S"/>            <!-- * s -->                                                  <!-- QMK: KC_S -->
+            <key code="17"  output="T"/>            <!-- * t -->                                                  <!-- QMK: KC_T -->
+            <key code="32"  output="U"/>            <!-- * u -->                                                  <!-- QMK: KC_U -->
+            <key code="9"   output="V"/>            <!-- * v -->                                                  <!-- QMK: KC_V -->
+            <key code="13"  output="W"/>            <!-- * w -->                                                  <!-- QMK: KC_W -->
+            <key code="7"   output="X"/>            <!-- * x -->                                                  <!-- QMK: KC_X -->
+            <key code="16"  output="Y"/>            <!-- * y -->                                                  <!-- QMK: KC_Y -->
+            <key code="6"   output="Z"/>            <!-- * z -->                                                  <!-- QMK: KC_Z -->
 
-            <!-- Modifier keys: Option -->
+            <key code="29"  output="0"/>            <!-- 0 -->                                                    <!-- QMK: KC_0 -->
+            <key code="18"  output="1"/>            <!-- 1 -->                                                    <!-- QMK: KC_1 -->
+            <key code="19"  output="2"/>            <!-- 2 -->                                                    <!-- QMK: KC_2 -->
+            <key code="20"  output="3"/>            <!-- 3 -->                                                    <!-- QMK: KC_3 -->
+            <key code="21"  output="4"/>            <!-- 4 -->                                                    <!-- QMK: KC_4 -->
+            <key code="23"  output="5"/>            <!-- 5 -->                                                    <!-- QMK: KC_5 -->
+            <key code="22"  output="6"/>            <!-- 6 -->                                                    <!-- QMK: KC_6 -->
+            <key code="26"  output="7"/>            <!-- 7 -->                                                    <!-- QMK: KC_7 -->
+            <key code="28"  output="8"/>            <!-- 8 -->                                                    <!-- QMK: KC_8 -->
+            <key code="25"  output="9"/>            <!-- 9 -->                                                    <!-- QMK: KC_9 -->
 
-            <key code="0" output=")"/>
-            <key code="1" output="]"/>
-            <key code="2" output="&#x003E;"/>
-            <key code="3" output="}"/>
-            <key code="4" output=","/>
-            <key code="5" output="\"/>
-            <key code="6" output="&#x2018;"/>
-            <key code="7" output="&#x2019;"/>
-            <key code="8" output="&#x201C;"/>
-            <key code="9" output="&#x201D;"/>
-            <key code="10" output=""/>
-            <key code="11" output="&#x25E6;"/>
-            <key code="12" output="("/>
-            <key code="13" output="["/>
-            <key code="14" output="&#x003C;"/>
-            <key code="15" output="{"/>
-            <key code="16" output="."/>
-            <key code="17" output="/"/>
-            <key code="18" output="-"/>
-            <key code="19" output="–"/>
-            <key code="20" output="—"/>
-            <key code="21" output="―"/>
-            <key code="22" output=""/>
-            <key code="23" output=""/>
-            <key code="24" output="×"/>
-            <key code="25" output=""/>
-            <key code="26" output=""/>
-            <key code="27" output="•"/>
-            <key code="28" output=""/>
-            <key code="29" output=""/>
-            <key code="30" output=""/>
-            <key code="31" output="!"/>
-            <key code="32" output=":"/>
-            <key code="33" output="|"/>
-            <key code="34" output="&#x0027;"/>
-            <key code="35" output="`"/>
-            <key code="36" output="&#x000D;"/>
-            <key code="37" output="?"/>
-            <key code="38" output=";"/>
-            <key code="39" output=""/>
-            <key code="40" output="&#x0022;"/>
-            <key code="41" output="~"/>
-            <key code="42" output=""/>
-            <key code="43" output=""/>
-            <key code="44" output=""/>
-            <key code="45" output=""/>
-            <key code="46" output=""/>
-            <key code="47" output=""/>
-            <key code="48" output="&#x0009;"/>
-            <key code="49" output=""/>
-            <key code="50" output=""/>
-            <key code="51" output="&#x0008;"/>
-            <key code="53" output="&#x001B;"/>
-            <key code="64" output="&#x0010;"/>
-            <key code="65" output=""/>
-            <key code="66" output="&#x001D;"/>
-            <key code="67" output=""/>
-            <key code="69" output=""/>
-            <key code="70" output="&#x001C;"/>
-            <key code="71" output="&#x001B;"/>
-            <key code="72" output="&#x001F;"/>
-            <key code="75" output=""/>
-            <key code="76" output="&#x0003;"/>
-            <key code="77" output="&#x001E;"/>
-            <key code="78" output=""/>
-            <key code="79" output="&#x0010;"/>
-            <key code="80" output="&#x0010;"/>
-            <key code="81" output=""/>
-            <key code="82" output=""/>
-            <key code="83" output=""/>
-            <key code="84" output=""/>
-            <key code="85" output=""/>
-            <key code="86" output=""/>
-            <key code="87" output=""/>
-            <key code="88" output=""/>
-            <key code="89" output=""/>
-            <key code="91" output=""/>
-            <key code="92" output=""/>
-            <key code="96" output="&#x0010;"/>
-            <key code="97" output="&#x0010;"/>
-            <key code="98" output="&#x0010;"/>
-            <key code="99" output="&#x0010;"/>
-            <key code="100" output="&#x0010;"/>
-            <key code="101" output="&#x0010;"/>
-            <key code="103" output="&#x0010;"/>
-            <key code="105" output="&#x0010;"/>
-            <key code="106" output="&#x0010;"/>
-            <key code="107" output="&#x0010;"/>
-            <key code="109" output="&#x0010;"/>
-            <key code="111" output="&#x0010;"/>
-            <key code="113" output="&#x0010;"/>
-            <key code="114" output="&#x0005;"/>
-            <key code="115" output="&#x0001;"/>
-            <key code="116" output="&#x000B;"/>
-            <key code="117" output="&#x007F;"/>
-            <key code="118" output="&#x0010;"/>
-            <key code="119" output="&#x0004;"/>
-            <key code="120" output="&#x0010;"/>
-            <key code="121" output="&#x000C;"/>
-            <key code="122" output="&#x0010;"/>
-            <key code="123" output="&#x001C;"/>
-            <key code="124" output="&#x001D;"/>
-            <key code="125" output="&#x001F;"/>
-            <key code="126" output="&#x001E;"/>
+            <key code="27"  output="-"/>            <!-- Hyphen-Minus -->                                         <!-- QMK: KC_MINUS -->
+            <key code="44"  output="/"/>            <!-- Solidus -->                                              <!-- QMK: KC_SLASH -->
+            <key code="42"  output="\"/>            <!-- Reverse Solidus -->                                      <!-- QMK: KC_BACKSLASH -->
+            <key code="24"  output="="/>            <!-- Equals Sign -->                                          <!-- QMK: KC_EQUAL -->
+            <key code="33"  output="["/>            <!-- Left Square Bracket -->                                  <!-- QMK: KC_LEFT_BRACKET -->
+            <key code="30"  output="]"/>            <!-- Right Square Bracket -->                                 <!-- QMK: KC_RIGHT_BRACKET -->
+            <key code="43"  output=","/>            <!-- Comma -->                                                <!-- QMK: KC_COMMA -->
+            <key code="47"  output="."/>            <!-- Full Stop -->                                            <!-- QMK: KC_DOT -->
+            <key code="41"  output=";"/>            <!-- Semicolon -->                                            <!-- QMK: KC_SEMICOLON -->
+            <key code="39"  output="&#x0027;"/>     <!-- Apostrophe -->                                           <!-- QMK: KC_QUOTE -->
+            <key code="50"  output="`"/>            <!-- Grave Accent -->                                         <!-- QMK: KC_GRAVE -->
+
+            <key code="49"  output=" "/>            <!-- Space (SP) -->                                           <!-- QMK: KC_SPACE -->
+            <key code="51"  output="&#x0008;"/>     <!-- Backspace (BS) -->                                       <!-- QMK: KC_BACKSPACE -->
+            <key code="36"  output="&#x000D;"/>     <!-- Carriage Return (CR) -->                                 <!-- QMK: KC_ENTER -->
+            <key code="48"  output="&#x0009;"/>     <!-- Character Tabulation (HT, TAB) -->                       <!-- QMK: KC_TAB -->
+            <key code="53"  output="&#x001B;"/>     <!-- Escape (ESC) -->                                         <!-- QMK: KC_ESCAPE -->
+
+            <key code="70"  output="&#x001C;"/>     <!-- File Separator (FS): Numpad Arrow Left -->
+            <key code="66"  output="&#x001D;"/>     <!-- Group Separator (GS): Numpad Arrow Right -->
+            <key code="77"  output="&#x001E;"/>     <!-- Information Separator Two (RS): Numpad Arrow Up -->
+            <key code="72"  output="&#x001F;"/>     <!-- Information Separator One (US): Numpad Arrow Down -->
+            <key code="69"  output="+"/>            <!-- Numpad Plus Sign -->                                     <!-- QMK: KC_KP_PLUS -->
+            <key code="78"  output="-"/>            <!-- Numpad Hyphen-Minus -->                                  <!-- QMK: KC_KP_MINUS -->
+            <key code="67"  output="*"/>            <!-- Numpad Asterisk -->                                      <!-- QMK: KC_KP_ASTERISK -->
+            <key code="75"  output="/"/>            <!-- Numpad Solidus -->                                       <!-- QMK: KC_KP_SLASH -->
+            <key code="81"  output="="/>            <!-- Numpad Equals Sign -->                                   <!-- QMK: KC_KP_EQUAL -->
+            <key code="71"  output="&#x001B;"/>     <!-- Escape (ESC): Numpad Escape? -->
+            <key code="64"  output="&#x0010;"/>     <!-- Data Link Escape, Unknown (Num Lock?) -->                <!-- QMK: KC_NUM_LOCK -->
+            <key code="76"  output="&#x0003;"/>     <!-- End of Text (ETX): Numpad Enter -->                      <!-- QMK: KC_KP_ENTER -->
+            <key code="82"  output="0"/>            <!-- Numpad 0 -->                                             <!-- QMK: KC_KP_0 -->
+            <key code="83"  output="1"/>            <!-- Numpad 1 -->                                             <!-- QMK: KC_KP_1 -->
+            <key code="84"  output="2"/>            <!-- Numpad 2 -->                                             <!-- QMK: KC_KP_2 -->
+            <key code="85"  output="3"/>            <!-- Numpad 3 -->                                             <!-- QMK: KC_KP_3 -->
+            <key code="86"  output="4"/>            <!-- Numpad 4 -->                                             <!-- QMK: KC_KP_4 -->
+            <key code="87"  output="5"/>            <!-- Numpad 5 -->                                             <!-- QMK: KC_KP_5 -->
+            <key code="88"  output="6"/>            <!-- Numpad 6 -->                                             <!-- QMK: KC_KP_6 -->
+            <key code="89"  output="7"/>            <!-- Numpad 7 -->                                             <!-- QMK: KC_KP_7 -->
+            <key code="91"  output="8"/>            <!-- Numpad 8 -->                                             <!-- QMK: KC_KP_8 -->
+            <key code="92"  output="9"/>            <!-- Numpad 9 -->                                             <!-- QMK: KC_KP_9 -->
+
+            <key code="122" output="&#x0010;"/>     <!-- Data Link Escape (DLE): F1 -->                           <!-- QMK: KC_F1 -->
+            <key code="120" output="&#x0010;"/>     <!-- Data Link Escape (DLE): F2 -->                           <!-- QMK: KC_F2 -->
+            <key code="99"  output="&#x0010;"/>     <!-- Data Link Escape (DLE): F3 -->                           <!-- QMK: KC_F3 -->
+            <key code="118" output="&#x0010;"/>     <!-- Data Link Escape (DLE): F4 -->                           <!-- QMK: KC_F4 -->
+            <key code="96"  output="&#x0010;"/>     <!-- Data Link Escape (DLE): F5 -->                           <!-- QMK: KC_F5 -->
+            <key code="97"  output="&#x0010;"/>     <!-- Data Link Escape (DLE): F6 -->                           <!-- QMK: KC_F6 -->
+            <key code="98"  output="&#x0010;"/>     <!-- Data Link Escape (DLE): F7 -->                           <!-- QMK: KC_F7 -->
+            <key code="100" output="&#x0010;"/>     <!-- Data Link Escape (DLE): F8 -->                           <!-- QMK: KC_F8 -->
+            <key code="101" output="&#x0010;"/>     <!-- Data Link Escape (DLE): F9 -->                           <!-- QMK: KC_F9 -->
+            <key code="109" output="&#x0010;"/>     <!-- Data Link Escape (DLE): F10 -->                          <!-- QMK: KC_F10 -->
+            <key code="103" output="&#x0010;"/>     <!-- Data Link Escape (DLE): F11 -->                          <!-- QMK: KC_F11 -->
+            <key code="111" output="&#x0010;"/>     <!-- Data Link Escape (DLE): F12 -->                          <!-- QMK: KC_F12 -->
+            <key code="105" output="&#x0010;"/>     <!-- Data Link Escape (DLE): F13 -->                          <!-- QMK: KC_F13 -->
+            <key code="107" output="&#x0010;"/>     <!-- Data Link Escape (DLE): F14 -->                          <!-- QMK: KC_F14 -->
+            <key code="113" output="&#x0010;"/>     <!-- Data Link Escape (DLE): F15 -->                          <!-- QMK: KC_F15 -->
+            <key code="106" output="&#x0010;"/>     <!-- Data Link Escape (DLE): F16 -->                          <!-- QMK: KC_F16 -->
+
+            <key code="114" output="&#x0005;"/>     <!-- Enquiry (ENQ): Help -->                                  <!-- QMK: KC_HELP -->
+            <key code="117" output="&#x007F;"/>     <!-- Delete (DEL) -->                                         <!-- QMK: KC_DELETE -->
+            <key code="115" output="&#x0001;"/>     <!-- Start of Heading (SOH): Home -->                         <!-- QMK: KC_HOME -->
+            <key code="119" output="&#x0004;"/>     <!-- End of Transmission (EOT): End -->                       <!-- QMK: KC_END -->
+            <key code="116" output="&#x000B;"/>     <!-- Line Tabulation (VT): Page Up -->                        <!-- QMK: KC_PAGE_UP -->
+            <key code="121" output="&#x000C;"/>     <!-- Form Feed (FF): Page Down -->                            <!-- QMK: KC_PAGE_DOWN -->
+
+            <key code="123" output="&#x001C;"/>     <!-- File Separator (FS): Arrow Left -->                      <!-- QMK: KC_LEFT -->
+            <key code="124" output="&#x001D;"/>     <!-- Group Separator (GS): Arrow Right -->                    <!-- QMK: KC_RIGHT -->
+            <key code="126" output="&#x001E;"/>     <!-- Information Separator Two (RS): Arrow Up -->             <!-- QMK: KC_UP -->
+            <key code="125" output="&#x001F;"/>     <!-- Information Separator One (US): Arrow Down -->           <!-- QMK: KC_DOWN -->
+
+            <key code="10"  output=""/>             <!-- Empty -->
+            <key code="65"  output=""/>             <!-- Empty -->
+                                                    <!-- Missing key code: 52 -->
+                                                    <!-- Missing key code: 54 -->
+                                                    <!-- Missing key code: 55 -->
+                                                    <!-- Missing key code: 56 -->
+                                                    <!-- Missing key code: 57 -->
+                                                    <!-- Missing key code: 58 -->
+                                                    <!-- Missing key code: 59 -->
+                                                    <!-- Missing key code: 60 -->
+                                                    <!-- Missing key code: 61 -->
+                                                    <!-- Missing key code: 62 -->
+                                                    <!-- Missing key code: 63 -->
+                                                    <!-- Missing key code: 68 -->
+                                                    <!-- Missing key code: 73 -->
+                                                    <!-- Missing key code: 74 -->
+                                                    <!-- Missing key code: 90 -->
+                                                    <!-- Missing key code: 93 -->
+                                                    <!-- Missing key code: 94 -->
+                                                    <!-- Missing key code: 95 -->
+            <key code="79"  output="&#x0010;"/>     <!-- Unknown: Data Link Escape (DLE) -->
+            <key code="80"  output="&#x0010;"/>     <!-- Unknown: Data Link Escape (DLE) -->
+                                                    <!-- Missing key code: 102 -->
+                                                    <!-- Missing key code: 104 -->
+                                                    <!-- Missing key code: 108 -->
+                                                    <!-- Missing key code: 110 -->
+                                                    <!-- Missing key code: 112 -->
+                                                    <!-- Missing key code: 127 -->
         </keyMap>
+
+
+
+
+        <!-- Shift -->
         <keyMap index="3">
+            <key code="0"   output="A"/>            <!-- * a -->                                                  <!-- QMK: KC_A -->
+            <key code="11"  output="B"/>            <!-- * b -->                                                  <!-- QMK: KC_B -->
+            <key code="8"   output="C"/>            <!-- * c -->                                                  <!-- QMK: KC_C -->
+            <key code="2"   output="D"/>            <!-- * d -->                                                  <!-- QMK: KC_D -->
+            <key code="14"  output="E"/>            <!-- * e -->                                                  <!-- QMK: KC_E -->
+            <key code="3"   output="F"/>            <!-- * f -->                                                  <!-- QMK: KC_F -->
+            <key code="5"   output="G"/>            <!-- * g -->                                                  <!-- QMK: KC_G -->
+            <key code="4"   output="H"/>            <!-- * h -->                                                  <!-- QMK: KC_H -->
+            <key code="34"  output="I"/>            <!-- * i -->                                                  <!-- QMK: KC_I -->
+            <key code="38"  output="J"/>            <!-- * j -->                                                  <!-- QMK: KC_J -->
+            <key code="40"  output="K"/>            <!-- * k -->                                                  <!-- QMK: KC_K -->
+            <key code="37"  output="L"/>            <!-- * l -->                                                  <!-- QMK: KC_L -->
+            <key code="46"  output="M"/>            <!-- * m -->                                                  <!-- QMK: KC_M -->
+            <key code="45"  output="N"/>            <!-- * n -->                                                  <!-- QMK: KC_N -->
+            <key code="31"  output="O"/>            <!-- * o -->                                                  <!-- QMK: KC_O -->
+            <key code="35"  output="P"/>            <!-- * p -->                                                  <!-- QMK: KC_P -->
+            <key code="12"  output="Q"/>            <!-- * q -->                                                  <!-- QMK: KC_Q -->
+            <key code="15"  output="R"/>            <!-- * r -->                                                  <!-- QMK: KC_R -->
+            <key code="1"   output="S"/>            <!-- * s -->                                                  <!-- QMK: KC_S -->
+            <key code="17"  output="T"/>            <!-- * t -->                                                  <!-- QMK: KC_T -->
+            <key code="32"  output="U"/>            <!-- * u -->                                                  <!-- QMK: KC_U -->
+            <key code="9"   output="V"/>            <!-- * v -->                                                  <!-- QMK: KC_V -->
+            <key code="13"  output="W"/>            <!-- * w -->                                                  <!-- QMK: KC_W -->
+            <key code="7"   output="X"/>            <!-- * x -->                                                  <!-- QMK: KC_X -->
+            <key code="16"  output="Y"/>            <!-- * y -->                                                  <!-- QMK: KC_Y -->
+            <key code="6"   output="Z"/>            <!-- * z -->                                                  <!-- QMK: KC_Z -->
 
-            <!-- Modifier keys: Shift+Option -->
+            <key code="29"  output=")"/>            <!-- * 0 -->                                                  <!-- QMK: KC_0 -->
+            <key code="18"  output="!"/>            <!-- * 1 -->                                                  <!-- QMK: KC_1 -->
+            <key code="19"  output="@"/>            <!-- * 2 -->                                                  <!-- QMK: KC_2 -->
+            <key code="20"  output="#"/>            <!-- * 3 -->                                                  <!-- QMK: KC_3 -->
+            <key code="21"  output="$"/>            <!-- * 4 -->                                                  <!-- QMK: KC_4 -->
+            <key code="23"  output="%"/>            <!-- * 5 -->                                                  <!-- QMK: KC_5 -->
+            <key code="22"  output="^"/>            <!-- * 6 -->                                                  <!-- QMK: KC_6 -->
+            <key code="26"  output="&#x0026;"/>     <!-- * 7 -->                                                  <!-- QMK: KC_7 -->
+            <key code="28"  output="*"/>            <!-- * 8 -->                                                  <!-- QMK: KC_8 -->
+            <key code="25"  output="("/>            <!-- * 9 -->                                                  <!-- QMK: KC_9 -->
 
-            <key code="0" output=""/>
-            <key code="1" output=""/>
-            <key code="2" output=""/>
-            <key code="3" output=""/>
-            <key code="4" output=""/>
-            <key code="5" output=""/>
-            <key code="6" output=""/>
-            <key code="7" output=""/>
-            <key code="8" output=""/>
-            <key code="9" output=""/>
-            <key code="10" output=""/>
-            <key code="11" output=""/>
-            <key code="12" output=""/>
-            <key code="13" output=""/>
-            <key code="14" output=""/>
-            <key code="15" output=""/>
-            <key code="16" output=""/>
-            <key code="17" output=""/>
-            <key code="18" output=""/>
-            <key code="19" output=""/>
-            <key code="20" output=""/>
-            <key code="21" output=""/>
-            <key code="22" output=""/>
-            <key code="23" output=""/>
-            <key code="24" output=""/>
-            <key code="25" output=""/>
-            <key code="26" output=""/>
-            <key code="27" output=""/>
-            <key code="28" output=""/>
-            <key code="29" output=""/>
-            <key code="30" output=""/>
-            <key code="31" output=""/>
-            <key code="32" output=""/>
-            <key code="33" output=""/>
-            <key code="34" output=""/>
-            <key code="35" output=""/>
-            <key code="36" output="&#x000D;"/>
-            <key code="37" output=""/>
-            <key code="38" output=""/>
-            <key code="39" output=""/>
-            <key code="40" output=""/>
-            <key code="41" output=""/>
-            <key code="42" output=""/>
-            <key code="43" output=""/>
-            <key code="44" output=""/>
-            <key code="45" output=""/>
-            <key code="46" output=""/>
-            <key code="47" output=""/>
-            <key code="48" output="&#x0009;"/>
-            <key code="49" output=""/>
-            <key code="50" output=""/>
-            <key code="51" output="&#x0008;"/>
-            <key code="53" output="&#x001B;"/>
-            <key code="64" output="&#x0010;"/>
-            <key code="65" output=""/>
-            <key code="66" output="&#x001D;"/>
-            <key code="67" output=""/>
-            <key code="69" output=""/>
-            <key code="70" output="&#x001C;"/>
-            <key code="71" output="&#x001B;"/>
-            <key code="72" output="&#x001F;"/>
-            <key code="75" output=""/>
-            <key code="76" output="&#x0003;"/>
-            <key code="77" output="&#x001E;"/>
-            <key code="78" output=""/>
-            <key code="79" output="&#x0010;"/>
-            <key code="80" output="&#x0010;"/>
-            <key code="81" output=""/>
-            <key code="82" output=""/>
-            <key code="83" output=""/>
-            <key code="84" output=""/>
-            <key code="85" output=""/>
-            <key code="86" output=""/>
-            <key code="87" output=""/>
-            <key code="88" output=""/>
-            <key code="89" output=""/>
-            <key code="91" output=""/>
-            <key code="92" output=""/>
-            <key code="96" output="&#x0010;"/>
-            <key code="97" output="&#x0010;"/>
-            <key code="98" output="&#x0010;"/>
-            <key code="99" output="&#x0010;"/>
-            <key code="100" output="&#x0010;"/>
-            <key code="101" output="&#x0010;"/>
-            <key code="103" output="&#x0010;"/>
-            <key code="105" output="&#x0010;"/>
-            <key code="106" output="&#x0010;"/>
-            <key code="107" output="&#x0010;"/>
-            <key code="109" output="&#x0010;"/>
-            <key code="111" output="&#x0010;"/>
-            <key code="113" output="&#x0010;"/>
-            <key code="114" output="&#x0005;"/>
-            <key code="115" output="&#x0001;"/>
-            <key code="116" output="&#x000B;"/>
-            <key code="117" output="&#x007F;"/>
-            <key code="118" output="&#x0010;"/>
-            <key code="119" output="&#x0004;"/>
-            <key code="120" output="&#x0010;"/>
-            <key code="121" output="&#x000C;"/>
-            <key code="122" output="&#x0010;"/>
-            <key code="123" output="&#x001C;"/>
-            <key code="124" output="&#x001D;"/>
-            <key code="125" output="&#x001F;"/>
-            <key code="126" output="&#x001E;"/>
+            <key code="27"  output="_"/>            <!-- * Hyphen-Minus -->                                       <!-- QMK: KC_MINUS -->
+            <key code="44"  output="?"/>            <!-- * Solidus -->                                            <!-- QMK: KC_SLASH -->
+            <key code="42"  output="|"/>            <!-- * Reverse Solidus -->                                    <!-- QMK: KC_BACKSLASH -->
+            <key code="24"  output="+"/>            <!-- * Equals Sign -->                                        <!-- QMK: KC_EQUAL -->
+            <key code="33"  output="{"/>            <!-- * Left Square Bracket -->                                <!-- QMK: KC_LEFT_BRACKET -->
+            <key code="30"  output="}"/>            <!-- * Right Square Bracket -->                               <!-- QMK: KC_RIGHT_BRACKET -->
+            <key code="43"  output="&#x003C;"/>     <!-- * Comma -->                                              <!-- QMK: KC_COMMA -->
+            <key code="47"  output="&#x003E;"/>     <!-- * Full Stop -->                                          <!-- QMK: KC_DOT -->
+            <key code="41"  output=":"/>            <!-- * Semicolon -->                                          <!-- QMK: KC_SEMICOLON -->
+            <key code="39"  output="&#x0022;"/>     <!-- * Apostrophe -->                                         <!-- QMK: KC_QUOTE -->
+            <key code="50"  output="~"/>            <!-- * Grave Accent -->                                       <!-- QMK: KC_GRAVE -->
+
+            <key code="49"  output=" "/>            <!-- Space (SP) -->                                           <!-- QMK: KC_SPACE -->
+            <key code="51"  output="&#x0008;"/>     <!-- Backspace (BS) -->                                       <!-- QMK: KC_BACKSPACE -->
+            <key code="36"  output="&#x000D;"/>     <!-- Carriage Return (CR) -->                                 <!-- QMK: KC_ENTER -->
+            <key code="48"  output="&#x0009;"/>     <!-- Character Tabulation (HT, TAB) -->                       <!-- QMK: KC_TAB -->
+            <key code="53"  output="&#x001B;"/>     <!-- Escape (ESC) -->                                         <!-- QMK: KC_ESCAPE -->
+
+            <key code="70"  output="&#x001C;"/>     <!-- File Separator (FS): Numpad Arrow Left -->
+            <key code="66"  output="&#x001D;"/>     <!-- Group Separator (GS): Numpad Arrow Right -->
+            <key code="77"  output="&#x001E;"/>     <!-- Information Separator Two (RS): Numpad Arrow Up -->
+            <key code="72"  output="&#x001F;"/>     <!-- Information Separator One (US): Numpad Arrow Down -->
+            <key code="69"  output="+"/>            <!-- Numpad Plus Sign -->                                     <!-- QMK: KC_KP_PLUS -->
+            <key code="78"  output="-"/>            <!-- Numpad Hyphen-Minus -->                                  <!-- QMK: KC_KP_MINUS -->
+            <key code="67"  output="*"/>            <!-- Numpad Asterisk -->                                      <!-- QMK: KC_KP_ASTERISK -->
+            <key code="75"  output="/"/>            <!-- Numpad Solidus -->                                       <!-- QMK: KC_KP_SLASH -->
+            <key code="81"  output="="/>            <!-- Numpad Equals Sign -->                                   <!-- QMK: KC_KP_EQUAL -->
+            <key code="71"  output="&#x001B;"/>     <!-- Escape (ESC): Numpad Escape? -->
+            <key code="64"  output="&#x0010;"/>     <!-- Data Link Escape, Unknown (Num Lock?) -->                <!-- QMK: KC_NUM_LOCK -->
+            <key code="76"  output="&#x0003;"/>     <!-- End of Text (ETX): Numpad Enter -->                      <!-- QMK: KC_KP_ENTER -->
+            <key code="82"  output="0"/>            <!-- Numpad 0 -->                                             <!-- QMK: KC_KP_0 -->
+            <key code="83"  output="1"/>            <!-- Numpad 1 -->                                             <!-- QMK: KC_KP_1 -->
+            <key code="84"  output="2"/>            <!-- Numpad 2 -->                                             <!-- QMK: KC_KP_2 -->
+            <key code="85"  output="3"/>            <!-- Numpad 3 -->                                             <!-- QMK: KC_KP_3 -->
+            <key code="86"  output="4"/>            <!-- Numpad 4 -->                                             <!-- QMK: KC_KP_4 -->
+            <key code="87"  output="5"/>            <!-- Numpad 5 -->                                             <!-- QMK: KC_KP_5 -->
+            <key code="88"  output="6"/>            <!-- Numpad 6 -->                                             <!-- QMK: KC_KP_6 -->
+            <key code="89"  output="7"/>            <!-- Numpad 7 -->                                             <!-- QMK: KC_KP_7 -->
+            <key code="91"  output="8"/>            <!-- Numpad 8 -->                                             <!-- QMK: KC_KP_8 -->
+            <key code="92"  output="9"/>            <!-- Numpad 9 -->                                             <!-- QMK: KC_KP_9 -->
+
+            <key code="122" output="&#x0010;"/>     <!-- Data Link Escape (DLE): F1 -->                           <!-- QMK: KC_F1 -->
+            <key code="120" output="&#x0010;"/>     <!-- Data Link Escape (DLE): F2 -->                           <!-- QMK: KC_F2 -->
+            <key code="99"  output="&#x0010;"/>     <!-- Data Link Escape (DLE): F3 -->                           <!-- QMK: KC_F3 -->
+            <key code="118" output="&#x0010;"/>     <!-- Data Link Escape (DLE): F4 -->                           <!-- QMK: KC_F4 -->
+            <key code="96"  output="&#x0010;"/>     <!-- Data Link Escape (DLE): F5 -->                           <!-- QMK: KC_F5 -->
+            <key code="97"  output="&#x0010;"/>     <!-- Data Link Escape (DLE): F6 -->                           <!-- QMK: KC_F6 -->
+            <key code="98"  output="&#x0010;"/>     <!-- Data Link Escape (DLE): F7 -->                           <!-- QMK: KC_F7 -->
+            <key code="100" output="&#x0010;"/>     <!-- Data Link Escape (DLE): F8 -->                           <!-- QMK: KC_F8 -->
+            <key code="101" output="&#x0010;"/>     <!-- Data Link Escape (DLE): F9 -->                           <!-- QMK: KC_F9 -->
+            <key code="109" output="&#x0010;"/>     <!-- Data Link Escape (DLE): F10 -->                          <!-- QMK: KC_F10 -->
+            <key code="103" output="&#x0010;"/>     <!-- Data Link Escape (DLE): F11 -->                          <!-- QMK: KC_F11 -->
+            <key code="111" output="&#x0010;"/>     <!-- Data Link Escape (DLE): F12 -->                          <!-- QMK: KC_F12 -->
+            <key code="105" output="&#x0010;"/>     <!-- Data Link Escape (DLE): F13 -->                          <!-- QMK: KC_F13 -->
+            <key code="107" output="&#x0010;"/>     <!-- Data Link Escape (DLE): F14 -->                          <!-- QMK: KC_F14 -->
+            <key code="113" output="&#x0010;"/>     <!-- Data Link Escape (DLE): F15 -->                          <!-- QMK: KC_F15 -->
+            <key code="106" output="&#x0010;"/>     <!-- Data Link Escape (DLE): F16 -->                          <!-- QMK: KC_F16 -->
+
+            <key code="114" output="&#x0005;"/>     <!-- Enquiry (ENQ): Help -->                                  <!-- QMK: KC_HELP -->
+            <key code="117" output="&#x007F;"/>     <!-- Delete (DEL) -->                                         <!-- QMK: KC_DELETE -->
+            <key code="115" output="&#x0001;"/>     <!-- Start of Heading (SOH): Home -->                         <!-- QMK: KC_HOME -->
+            <key code="119" output="&#x0004;"/>     <!-- End of Transmission (EOT): End -->                       <!-- QMK: KC_END -->
+            <key code="116" output="&#x000B;"/>     <!-- Line Tabulation (VT): Page Up -->                        <!-- QMK: KC_PAGE_UP -->
+            <key code="121" output="&#x000C;"/>     <!-- Form Feed (FF): Page Down -->                            <!-- QMK: KC_PAGE_DOWN -->
+
+            <key code="123" output="&#x001C;"/>     <!-- File Separator (FS): Arrow Left -->                      <!-- QMK: KC_LEFT -->
+            <key code="124" output="&#x001D;"/>     <!-- Group Separator (GS): Arrow Right -->                    <!-- QMK: KC_RIGHT -->
+            <key code="126" output="&#x001E;"/>     <!-- Information Separator Two (RS): Arrow Up -->             <!-- QMK: KC_UP -->
+            <key code="125" output="&#x001F;"/>     <!-- Information Separator One (US): Arrow Down -->           <!-- QMK: KC_DOWN -->
+
+            <key code="10"  output=""/>             <!-- Empty -->
+            <key code="65"  output=""/>             <!-- Empty -->
+                                                    <!-- Missing key code: 52 -->
+                                                    <!-- Missing key code: 54 -->
+                                                    <!-- Missing key code: 55 -->
+                                                    <!-- Missing key code: 56 -->
+                                                    <!-- Missing key code: 57 -->
+                                                    <!-- Missing key code: 58 -->
+                                                    <!-- Missing key code: 59 -->
+                                                    <!-- Missing key code: 60 -->
+                                                    <!-- Missing key code: 61 -->
+                                                    <!-- Missing key code: 62 -->
+                                                    <!-- Missing key code: 63 -->
+                                                    <!-- Missing key code: 68 -->
+                                                    <!-- Missing key code: 73 -->
+                                                    <!-- Missing key code: 74 -->
+                                                    <!-- Missing key code: 90 -->
+                                                    <!-- Missing key code: 93 -->
+                                                    <!-- Missing key code: 94 -->
+                                                    <!-- Missing key code: 95 -->
+            <key code="79"  output="&#x0010;"/>     <!-- Unknown: Data Link Escape (DLE) -->
+            <key code="80"  output="&#x0010;"/>     <!-- Unknown: Data Link Escape (DLE) -->
+                                                    <!-- Missing key code: 102 -->
+                                                    <!-- Missing key code: 104 -->
+                                                    <!-- Missing key code: 108 -->
+                                                    <!-- Missing key code: 110 -->
+                                                    <!-- Missing key code: 112 -->
+                                                    <!-- Missing key code: 127 -->
         </keyMap>
+
+
+
+
+        <!-- Option -->
         <keyMap index="4">
+            <key code="0"   output=")"/>            <!-- * a -->                                                  <!-- QMK: KC_A -->
+            <key code="11"  output="&#x25E6;"/>     <!-- * b -->                                                  <!-- QMK: KC_B -->
+            <key code="8"   output="&#x201C;"/>     <!-- * c -->                                                  <!-- QMK: KC_C -->
+            <key code="2"   output="&#x003E;"/>     <!-- * d -->                                                  <!-- QMK: KC_D -->
+            <key code="14"  output="&#x003C;"/>     <!-- * e -->                                                  <!-- QMK: KC_E -->
+            <key code="3"   output="}"/>            <!-- * f -->                                                  <!-- QMK: KC_F -->
+            <key code="5"   output="\"/>            <!-- * g -->                                                  <!-- QMK: KC_G -->
+            <key code="4"   output=","/>            <!-- * h -->                                                  <!-- QMK: KC_H -->
+            <key code="34"  output="&#x0027;"/>     <!-- * i -->                                                  <!-- QMK: KC_I -->
+            <key code="38"  output=";"/>            <!-- * j -->                                                  <!-- QMK: KC_J -->
+            <key code="40"  output="&#x0022;"/>     <!-- * k -->                                                  <!-- QMK: KC_K -->
+            <key code="37"  output="?"/>            <!-- * l -->                                                  <!-- QMK: KC_L -->
+            <key code="46"  output=""/>             <!-- * m -->                                                  <!-- QMK: KC_M -->
+            <key code="45"  output=""/>             <!-- * n -->                                                  <!-- QMK: KC_N -->
+            <key code="31"  output="!"/>            <!-- * o -->                                                  <!-- QMK: KC_O -->
+            <key code="35"  output="`"/>            <!-- * p -->                                                  <!-- QMK: KC_P -->
+            <key code="12"  output="("/>            <!-- * q -->                                                  <!-- QMK: KC_Q -->
+            <key code="15"  output="{"/>            <!-- * r -->                                                  <!-- QMK: KC_R -->
+            <key code="1"   output="]"/>            <!-- * s -->                                                  <!-- QMK: KC_S -->
+            <key code="17"  output="/"/>            <!-- * t -->                                                  <!-- QMK: KC_T -->
+            <key code="32"  output=":"/>            <!-- * u -->                                                  <!-- QMK: KC_U -->
+            <key code="9"   output="&#x201D;"/>     <!-- * v -->                                                  <!-- QMK: KC_V -->
+            <key code="13"  output="["/>            <!-- * w -->                                                  <!-- QMK: KC_W -->
+            <key code="7"   output="&#x2019;"/>     <!-- * x -->                                                  <!-- QMK: KC_X -->
+            <key code="16"  output="."/>            <!-- * y -->                                                  <!-- QMK: KC_Y -->
+            <key code="6"   output="&#x2018;"/>     <!-- * z -->                                                  <!-- QMK: KC_Z -->
 
-            <!-- Modifier keys: Command -->
+            <key code="29"  output=""/>             <!-- * 0 -->                                                  <!-- QMK: KC_0 -->
+            <key code="18"  output="-"/>            <!-- * 1 -->                                                  <!-- QMK: KC_1 -->
+            <key code="19"  output="–"/>            <!-- * 2 -->                                                  <!-- QMK: KC_2 -->
+            <key code="20"  output="—"/>            <!-- * 3 -->                                                  <!-- QMK: KC_3 -->
+            <key code="21"  output="―"/>            <!-- * 4 -->                                                  <!-- QMK: KC_4 -->
+            <key code="23"  output=""/>             <!-- * 5 -->                                                  <!-- QMK: KC_5 -->
+            <key code="22"  output=""/>             <!-- * 6 -->                                                  <!-- QMK: KC_6 -->
+            <key code="26"  output=""/>             <!-- * 7 -->                                                  <!-- QMK: KC_7 -->
+            <key code="28"  output=""/>             <!-- * 8 -->                                                  <!-- QMK: KC_8 -->
+            <key code="25"  output=""/>             <!-- * 9 -->                                                  <!-- QMK: KC_9 -->
 
-            <key code="0" output="a"/>
-            <key code="1" output="s"/>
-            <key code="2" output="d"/>
-            <key code="3" output="f"/>
-            <key code="4" output="h"/>
-            <key code="5" output="g"/>
-            <key code="6" output="z"/>
-            <key code="7" output="x"/>
-            <key code="8" output="c"/>
-            <key code="9" output="v"/>
-            <key code="10" output=""/>
-            <key code="11" output="b"/>
-            <key code="12" output="q"/>
-            <key code="13" output="w"/>
-            <key code="14" output="e"/>
-            <key code="15" output="r"/>
-            <key code="16" output="y"/>
-            <key code="17" output="t"/>
-            <key code="18" output="1"/>
-            <key code="19" output="2"/>
-            <key code="20" output="3"/>
-            <key code="21" output="4"/>
-            <key code="22" output="6"/>
-            <key code="23" output="5"/>
-            <key code="24" output="="/>
-            <key code="25" output="9"/>
-            <key code="26" output="7"/>
-            <key code="27" output="-"/>
-            <key code="28" output="8"/>
-            <key code="29" output="0"/>
-            <key code="30" output="]"/>
-            <key code="31" output="o"/>
-            <key code="32" output="u"/>
-            <key code="33" output="["/>
-            <key code="34" output="i"/>
-            <key code="35" output="p"/>
-            <key code="36" output="&#x000D;"/>
-            <key code="37" output="l"/>
-            <key code="38" output="j"/>
-            <key code="39" output="&#x0027;"/>
-            <key code="40" output="k"/>
-            <key code="41" output=";"/>
-            <key code="42" output="\"/>
-            <key code="43" output=","/>
-            <key code="44" output="/"/>
-            <key code="45" output="n"/>
-            <key code="46" output="m"/>
-            <key code="47" output="."/>
-            <key code="48" output="&#x0009;"/>
-            <key code="49" output=" "/>
-            <key code="50" output="`"/>
-            <key code="51" output="&#x0008;"/>
-            <key code="53" output="&#x001B;"/>
-            <key code="64" output="&#x0010;"/>
-            <key code="65" output=""/>
-            <key code="66" output="&#x001D;"/>
-            <key code="67" output="*"/>
-            <key code="69" output="+"/>
-            <key code="70" output="&#x001C;"/>
-            <key code="71" output="&#x001B;"/>
-            <key code="72" output="&#x001F;"/>
-            <key code="75" output="/"/>
-            <key code="76" output="&#x0003;"/>
-            <key code="77" output="&#x001E;"/>
-            <key code="78" output="-"/>
-            <key code="79" output="&#x0010;"/>
-            <key code="80" output="&#x0010;"/>
-            <key code="81" output="="/>
-            <key code="82" output="0"/>
-            <key code="83" output="1"/>
-            <key code="84" output="2"/>
-            <key code="85" output="3"/>
-            <key code="86" output="4"/>
-            <key code="87" output="5"/>
-            <key code="88" output="6"/>
-            <key code="89" output="7"/>
-            <key code="91" output="8"/>
-            <key code="92" output="9"/>
-            <key code="96" output="&#x0010;"/>
-            <key code="97" output="&#x0010;"/>
-            <key code="98" output="&#x0010;"/>
-            <key code="99" output="&#x0010;"/>
-            <key code="100" output="&#x0010;"/>
-            <key code="101" output="&#x0010;"/>
-            <key code="103" output="&#x0010;"/>
-            <key code="105" output="&#x0010;"/>
-            <key code="106" output="&#x0010;"/>
-            <key code="107" output="&#x0010;"/>
-            <key code="109" output="&#x0010;"/>
-            <key code="111" output="&#x0010;"/>
-            <key code="113" output="&#x0010;"/>
-            <key code="114" output="&#x0005;"/>
-            <key code="115" output="&#x0001;"/>
-            <key code="116" output="&#x000B;"/>
-            <key code="117" output="&#x007F;"/>
-            <key code="118" output="&#x0010;"/>
-            <key code="119" output="&#x0004;"/>
-            <key code="120" output="&#x0010;"/>
-            <key code="121" output="&#x000C;"/>
-            <key code="122" output="&#x0010;"/>
-            <key code="123" output="&#x001C;"/>
-            <key code="124" output="&#x001D;"/>
-            <key code="125" output="&#x001F;"/>
-            <key code="126" output="&#x001E;"/>
+            <key code="27"  output="•"/>            <!-- * Hyphen-Minus -->                                       <!-- QMK: KC_MINUS -->
+            <key code="44"  output=""/>             <!-- * Solidus -->                                            <!-- QMK: KC_SLASH -->
+            <key code="42"  output=""/>             <!-- * Reverse Solidus -->                                    <!-- QMK: KC_BACKSLASH -->
+            <key code="24"  output="×"/>            <!-- * Equals Sign -->                                        <!-- QMK: KC_EQUAL -->
+            <key code="33"  output="|"/>            <!-- * Left Square Bracket -->                                <!-- QMK: KC_LEFT_BRACKET -->
+            <key code="30"  output=""/>             <!-- * Right Square Bracket -->                               <!-- QMK: KC_RIGHT_BRACKET -->
+            <key code="43"  output=""/>             <!-- * Comma -->                                              <!-- QMK: KC_COMMA -->
+            <key code="47"  output=""/>             <!-- * Full Stop -->                                          <!-- QMK: KC_DOT -->
+            <key code="41"  output="~"/>            <!-- * Semicolon -->                                          <!-- QMK: KC_SEMICOLON -->
+            <key code="39"  output=""/>             <!-- * Apostrophe -->                                         <!-- QMK: KC_QUOTE -->
+            <key code="50"  output=""/>             <!-- * Grave Accent -->                                       <!-- QMK: KC_GRAVE -->
+
+            <key code="49"  output=" "/>            <!-- Space (SP) -->                                           <!-- QMK: KC_SPACE -->
+            <key code="51"  output="&#x0008;"/>     <!-- Backspace (BS) -->                                       <!-- QMK: KC_BACKSPACE -->
+            <key code="36"  output="&#x000D;"/>     <!-- Carriage Return (CR) -->                                 <!-- QMK: KC_ENTER -->
+            <key code="48"  output="&#x0009;"/>     <!-- Character Tabulation (HT, TAB) -->                       <!-- QMK: KC_TAB -->
+            <key code="53"  output="&#x001B;"/>     <!-- Escape (ESC) -->                                         <!-- QMK: KC_ESCAPE -->
+
+            <key code="70"  output="&#x001C;"/>     <!-- File Separator (FS): Numpad Arrow Left -->
+            <key code="66"  output="&#x001D;"/>     <!-- Group Separator (GS): Numpad Arrow Right -->
+            <key code="77"  output="&#x001E;"/>     <!-- Information Separator Two (RS): Numpad Arrow Up -->
+            <key code="72"  output="&#x001F;"/>     <!-- Information Separator One (US): Numpad Arrow Down -->
+            <key code="69"  output="+"/>            <!-- Numpad Plus Sign -->                                     <!-- QMK: KC_KP_PLUS -->
+            <key code="78"  output="-"/>            <!-- Numpad Hyphen-Minus -->                                  <!-- QMK: KC_KP_MINUS -->
+            <key code="67"  output="*"/>            <!-- Numpad Asterisk -->                                      <!-- QMK: KC_KP_ASTERISK -->
+            <key code="75"  output="/"/>            <!-- Numpad Solidus -->                                       <!-- QMK: KC_KP_SLASH -->
+            <key code="81"  output="="/>            <!-- Numpad Equals Sign -->                                   <!-- QMK: KC_KP_EQUAL -->
+            <key code="71"  output="&#x001B;"/>     <!-- Escape (ESC): Numpad Escape? -->
+            <key code="64"  output="&#x0010;"/>     <!-- Data Link Escape, Unknown (Num Lock?) -->                <!-- QMK: KC_NUM_LOCK -->
+            <key code="76"  output="&#x0003;"/>     <!-- End of Text (ETX): Numpad Enter -->                      <!-- QMK: KC_KP_ENTER -->
+            <key code="82"  output="0"/>            <!-- Numpad 0 -->                                             <!-- QMK: KC_KP_0 -->
+            <key code="83"  output="1"/>            <!-- Numpad 1 -->                                             <!-- QMK: KC_KP_1 -->
+            <key code="84"  output="2"/>            <!-- Numpad 2 -->                                             <!-- QMK: KC_KP_2 -->
+            <key code="85"  output="3"/>            <!-- Numpad 3 -->                                             <!-- QMK: KC_KP_3 -->
+            <key code="86"  output="4"/>            <!-- Numpad 4 -->                                             <!-- QMK: KC_KP_4 -->
+            <key code="87"  output="5"/>            <!-- Numpad 5 -->                                             <!-- QMK: KC_KP_5 -->
+            <key code="88"  output="6"/>            <!-- Numpad 6 -->                                             <!-- QMK: KC_KP_6 -->
+            <key code="89"  output="7"/>            <!-- Numpad 7 -->                                             <!-- QMK: KC_KP_7 -->
+            <key code="91"  output="8"/>            <!-- Numpad 8 -->                                             <!-- QMK: KC_KP_8 -->
+            <key code="92"  output="9"/>            <!-- Numpad 9 -->                                             <!-- QMK: KC_KP_9 -->
+
+            <key code="122" output="&#x0010;"/>     <!-- Data Link Escape (DLE): F1 -->                           <!-- QMK: KC_F1 -->
+            <key code="120" output="&#x0010;"/>     <!-- Data Link Escape (DLE): F2 -->                           <!-- QMK: KC_F2 -->
+            <key code="99"  output="&#x0010;"/>     <!-- Data Link Escape (DLE): F3 -->                           <!-- QMK: KC_F3 -->
+            <key code="118" output="&#x0010;"/>     <!-- Data Link Escape (DLE): F4 -->                           <!-- QMK: KC_F4 -->
+            <key code="96"  output="&#x0010;"/>     <!-- Data Link Escape (DLE): F5 -->                           <!-- QMK: KC_F5 -->
+            <key code="97"  output="&#x0010;"/>     <!-- Data Link Escape (DLE): F6 -->                           <!-- QMK: KC_F6 -->
+            <key code="98"  output="&#x0010;"/>     <!-- Data Link Escape (DLE): F7 -->                           <!-- QMK: KC_F7 -->
+            <key code="100" output="&#x0010;"/>     <!-- Data Link Escape (DLE): F8 -->                           <!-- QMK: KC_F8 -->
+            <key code="101" output="&#x0010;"/>     <!-- Data Link Escape (DLE): F9 -->                           <!-- QMK: KC_F9 -->
+            <key code="109" output="&#x0010;"/>     <!-- Data Link Escape (DLE): F10 -->                          <!-- QMK: KC_F10 -->
+            <key code="103" output="&#x0010;"/>     <!-- Data Link Escape (DLE): F11 -->                          <!-- QMK: KC_F11 -->
+            <key code="111" output="&#x0010;"/>     <!-- Data Link Escape (DLE): F12 -->                          <!-- QMK: KC_F12 -->
+            <key code="105" output="&#x0010;"/>     <!-- Data Link Escape (DLE): F13 -->                          <!-- QMK: KC_F13 -->
+            <key code="107" output="&#x0010;"/>     <!-- Data Link Escape (DLE): F14 -->                          <!-- QMK: KC_F14 -->
+            <key code="113" output="&#x0010;"/>     <!-- Data Link Escape (DLE): F15 -->                          <!-- QMK: KC_F15 -->
+            <key code="106" output="&#x0010;"/>     <!-- Data Link Escape (DLE): F16 -->                          <!-- QMK: KC_F16 -->
+
+            <key code="114" output="&#x0005;"/>     <!-- Enquiry (ENQ): Help -->                                  <!-- QMK: KC_HELP -->
+            <key code="117" output="&#x007F;"/>     <!-- Delete (DEL) -->                                         <!-- QMK: KC_DELETE -->
+            <key code="115" output="&#x0001;"/>     <!-- Start of Heading (SOH): Home -->                         <!-- QMK: KC_HOME -->
+            <key code="119" output="&#x0004;"/>     <!-- End of Transmission (EOT): End -->                       <!-- QMK: KC_END -->
+            <key code="116" output="&#x000B;"/>     <!-- Line Tabulation (VT): Page Up -->                        <!-- QMK: KC_PAGE_UP -->
+            <key code="121" output="&#x000C;"/>     <!-- Form Feed (FF): Page Down -->                            <!-- QMK: KC_PAGE_DOWN -->
+
+            <key code="123" output="&#x001C;"/>     <!-- File Separator (FS): Arrow Left -->                      <!-- QMK: KC_LEFT -->
+            <key code="124" output="&#x001D;"/>     <!-- Group Separator (GS): Arrow Right -->                    <!-- QMK: KC_RIGHT -->
+            <key code="126" output="&#x001E;"/>     <!-- Information Separator Two (RS): Arrow Up -->             <!-- QMK: KC_UP -->
+            <key code="125" output="&#x001F;"/>     <!-- Information Separator One (US): Arrow Down -->           <!-- QMK: KC_DOWN -->
+
+            <key code="10"  output=""/>             <!-- Empty -->
+            <key code="65"  output=""/>             <!-- Empty -->
+                                                    <!-- Missing key code: 52 -->
+                                                    <!-- Missing key code: 54 -->
+                                                    <!-- Missing key code: 55 -->
+                                                    <!-- Missing key code: 56 -->
+                                                    <!-- Missing key code: 57 -->
+                                                    <!-- Missing key code: 58 -->
+                                                    <!-- Missing key code: 59 -->
+                                                    <!-- Missing key code: 60 -->
+                                                    <!-- Missing key code: 61 -->
+                                                    <!-- Missing key code: 62 -->
+                                                    <!-- Missing key code: 63 -->
+                                                    <!-- Missing key code: 68 -->
+                                                    <!-- Missing key code: 73 -->
+                                                    <!-- Missing key code: 74 -->
+                                                    <!-- Missing key code: 90 -->
+                                                    <!-- Missing key code: 93 -->
+                                                    <!-- Missing key code: 94 -->
+                                                    <!-- Missing key code: 95 -->
+            <key code="79"  output="&#x0010;"/>     <!-- Unknown: Data Link Escape (DLE) -->
+            <key code="80"  output="&#x0010;"/>     <!-- Unknown: Data Link Escape (DLE) -->
+                                                    <!-- Missing key code: 102 -->
+                                                    <!-- Missing key code: 104 -->
+                                                    <!-- Missing key code: 108 -->
+                                                    <!-- Missing key code: 110 -->
+                                                    <!-- Missing key code: 112 -->
+                                                    <!-- Missing key code: 127 -->
         </keyMap>
+
+
+
+
+        <!-- Meh: Option-Shift-Сontrol -->
         <keyMap index="5">
+            <key code="0"   output="("/>            <!-- a * ( Left Parenthesis -->                               <!-- QMK: KC_A -->
+            <key code="11"  output=")"/>            <!-- b * ) Right Parenthesis -->                              <!-- QMK: KC_B -->
+            <key code="8"   output="["/>            <!-- c * [ Left Square Bracket -->                            <!-- QMK: KC_C -->
+            <key code="2"   output="]"/>            <!-- d * ] Right Square Bracket -->                           <!-- QMK: KC_D -->
+            <key code="14"  output="{"/>            <!-- e * { Left Curly Bracket -->                             <!-- QMK: KC_E -->
+            <key code="3"   output="}"/>            <!-- f * } Right Curly Bracket -->                            <!-- QMK: KC_F -->
+            <key code="5"   output="&#x003C;"/>     <!-- g * < Less-Than Sign -->                                 <!-- QMK: KC_G -->
+            <key code="4"   output="&#x003E;"/>     <!-- h * > Greater-Than Sign -->                              <!-- QMK: KC_H -->
+            <key code="34"  output=","/>            <!-- i * , Comma -->                                          <!-- QMK: KC_I -->
+            <key code="38"  output="."/>            <!-- j * . Full Stop -->                                      <!-- QMK: KC_J -->
+            <key code="40"  output="?"/>            <!-- k * ? Question Mark -->                                  <!-- QMK: KC_K -->
+            <key code="37"  output="!"/>            <!-- l * ! Exclamation Mark -->                               <!-- QMK: KC_L -->
+            <key code="46"  output=":"/>            <!-- m * : Colon -->                                          <!-- QMK: KC_M -->
+            <key code="45"  output=";"/>            <!-- n * ; Semicolon -->                                      <!-- QMK: KC_N -->
+            <key code="31"  output="&#xD7;"/>       <!-- o * × Multiplication Sign -->                            <!-- QMK: KC_O -->
+            <key code="35"  output="~"/>            <!-- o * ~ Tilde -->                                          <!-- QMK: KC_P -->
+            <key code="12"  output="|"/>            <!-- q * | Vertical Line -->                                  <!-- QMK: KC_Q -->
+            <key code="15"  output="/"/>            <!-- r * / Solidus -->                                        <!-- QMK: KC_R -->
+            <key code="1"   output="\"/>            <!-- s * \ Reverse Solidus -->                                <!-- QMK: KC_S -->
+            <key code="17"  output="&#x0027;"/>     <!-- t * ' Apostrophe -->                                     <!-- QMK: KC_T -->
+            <key code="32"  output="&#x0022;"/>     <!-- u * " Quotation Mark -->                                 <!-- QMK: KC_U -->
+            <key code="9"   output="`"/>            <!-- v * ` Grave Accent -->                                   <!-- QMK: KC_V -->
+            <key code="13"  output="&#x2018;"/>     <!-- w * ‘ Left Single Quotation Mark -->                     <!-- QMK: KC_W -->
+            <key code="7"   output="&#x2019;"/>     <!-- x * ’ Right Single Quotation Mark -->                    <!-- QMK: KC_X -->
+            <key code="16"  output="&#x201C;"/>     <!-- y * “ Left Double Quotation Mark -->                     <!-- QMK: KC_Y -->
+            <key code="6"   output="&#x201D;"/>     <!-- z * ” Right Double Quotation Mark -->                    <!-- QMK: KC_Z -->
 
-            <!-- Modifier keys: Caps Lock -->
+            <key code="29"  output="&#x2D;"/>       <!-- 0 * - Hyphen-Minus -->                                   <!-- QMK: KC_0 -->
+            <key code="18"  output="&#x2013;"/>     <!-- 1 * – En Dash -->                                        <!-- QMK: KC_1 -->
+            <key code="19"  output="&#x2014;"/>     <!-- 2 * — Em Dash -->                                        <!-- QMK: KC_2 -->
+            <key code="20"  output="&#x2015;"/>     <!-- 3 * ― Horizontal Bar -->                                 <!-- QMK: KC_3 -->
+            <key code="21"  output="&#xB7;"/>       <!-- 4 * · Middle Dot -->                                     <!-- QMK: KC_4 -->
+            <key code="23"  output="&#x2022;"/>     <!-- 5 * • Bullet -->                                         <!-- QMK: KC_5 -->
+            <key code="22"  output="&#x25E6;"/>     <!-- 6 * ◦ White Bullet -->                                   <!-- QMK: KC_6 -->
+            <key code="26"  output="&#xB0;"/>       <!-- 7 * ° Degree Sign -->                                    <!-- QMK: KC_7 -->
+            <key code="28"  output="_"/>            <!-- 8 * _ Low Line -->                                       <!-- QMK: KC_8 -->
+            <key code="25"  output="&#x20B4;"/>     <!-- 9 * ₴ Hryvnia Sign -->                                   <!-- QMK: KC_9 -->
 
-            <key code="0" output="A"/>
-            <key code="1" output="S"/>
-            <key code="2" output="D"/>
-            <key code="3" output="F"/>
-            <key code="4" output="H"/>
-            <key code="5" output="G"/>
-            <key code="6" output="Z"/>
-            <key code="7" output="X"/>
-            <key code="8" output="C"/>
-            <key code="9" output="V"/>
-            <key code="11" output="B"/>
-            <key code="12" output="Q"/>
-            <key code="13" output="W"/>
-            <key code="14" output="E"/>
-            <key code="15" output="R"/>
-            <key code="16" output="Y"/>
-            <key code="17" output="T"/>
-            <key code="18" output="1"/>
-            <key code="19" output="2"/>
-            <key code="20" output="3"/>
-            <key code="21" output="4"/>
-            <key code="22" output="6"/>
-            <key code="23" output="5"/>
-            <key code="24" output="="/>
-            <key code="25" output="9"/>
-            <key code="26" output="7"/>
-            <key code="27" output="-"/>
-            <key code="28" output="8"/>
-            <key code="29" output="0"/>
-            <key code="30" output="]"/>
-            <key code="31" output="O"/>
-            <key code="32" output="U"/>
-            <key code="33" output="["/>
-            <key code="34" output="I"/>
-            <key code="35" output="P"/>
-            <key code="36" output="&#x000D;"/>
-            <key code="37" output="L"/>
-            <key code="38" output="J"/>
-            <key code="39" output="&#x0027;"/>
-            <key code="40" output="K"/>
-            <key code="41" output=";"/>
-            <key code="42" output="\"/>
-            <key code="43" output=","/>
-            <key code="44" output="/"/>
-            <key code="45" output="N"/>
-            <key code="46" output="M"/>
-            <key code="47" output="."/>
-            <key code="48" output="&#x0009;"/>
-            <key code="49" output=" "/>
-            <key code="50" output="`"/>
-            <key code="51" output="&#x0008;"/>
-            <key code="53" output="&#x001B;"/>
-            <key code="64" output="&#x0010;"/>
-            <key code="66" output="&#x001D;"/>
-            <key code="67" output="*"/>
-            <key code="69" output="+"/>
-            <key code="70" output="&#x001C;"/>
-            <key code="71" output="&#x001B;"/>
-            <key code="72" output="&#x001F;"/>
-            <key code="75" output="/"/>
-            <key code="76" output="&#x0003;"/>
-            <key code="77" output="&#x001E;"/>
-            <key code="78" output="-"/>
-            <key code="79" output="&#x0010;"/>
-            <key code="80" output="&#x0010;"/>
-            <key code="81" output="="/>
-            <key code="82" output="0"/>
-            <key code="83" output="1"/>
-            <key code="84" output="2"/>
-            <key code="85" output="3"/>
-            <key code="86" output="4"/>
-            <key code="87" output="5"/>
-            <key code="88" output="6"/>
-            <key code="89" output="7"/>
-            <key code="91" output="8"/>
-            <key code="92" output="9"/>
-            <key code="96" output="&#x0010;"/>
-            <key code="97" output="&#x0010;"/>
-            <key code="98" output="&#x0010;"/>
-            <key code="99" output="&#x0010;"/>
-            <key code="100" output="&#x0010;"/>
-            <key code="101" output="&#x0010;"/>
-            <key code="103" output="&#x0010;"/>
-            <key code="105" output="&#x0010;"/>
-            <key code="106" output="&#x0010;"/>
-            <key code="107" output="&#x0010;"/>
-            <key code="109" output="&#x0010;"/>
-            <key code="111" output="&#x0010;"/>
-            <key code="113" output="&#x0010;"/>
-            <key code="114" output="&#x0005;"/>
-            <key code="115" output="&#x0001;"/>
-            <key code="116" output="&#x000B;"/>
-            <key code="117" output="&#x007F;"/>
-            <key code="118" output="&#x0010;"/>
-            <key code="119" output="&#x0004;"/>
-            <key code="120" output="&#x0010;"/>
-            <key code="121" output="&#x000C;"/>
-            <key code="122" output="&#x0010;"/>
-            <key code="123" output="&#x001C;"/>
-            <key code="124" output="&#x001D;"/>
-            <key code="125" output="&#x001F;"/>
-            <key code="126" output="&#x001E;"/>
+            <key code="27"  output="-"/>            <!-- Hyphen-Minus -->                                         <!-- QMK: KC_MINUS -->
+            <key code="44"  output="/"/>            <!-- Solidus -->                                              <!-- QMK: KC_SLASH -->
+            <key code="42"  output="\"/>            <!-- Reverse Solidus -->                                      <!-- QMK: KC_BACKSLASH -->
+            <key code="24"  output="="/>            <!-- Equals Sign -->                                          <!-- QMK: KC_EQUAL -->
+            <key code="33"  output="["/>            <!-- Left Square Bracket -->                                  <!-- QMK: KC_LEFT_BRACKET -->
+            <key code="30"  output="]"/>            <!-- Right Square Bracket -->                                 <!-- QMK: KC_RIGHT_BRACKET -->
+            <key code="43"  output=","/>            <!-- Comma -->                                                <!-- QMK: KC_COMMA -->
+            <key code="47"  output="."/>            <!-- Full Stop -->                                            <!-- QMK: KC_DOT -->
+            <key code="41"  output=";"/>            <!-- Semicolon -->                                            <!-- QMK: KC_SEMICOLON -->
+            <key code="39"  output="&#x0027;"/>     <!-- Apostrophe -->                                           <!-- QMK: KC_QUOTE -->
+            <key code="50"  output="`"/>            <!-- Grave Accent -->                                         <!-- QMK: KC_GRAVE -->
+
+            <key code="49"  output=" "/>            <!-- Space (SP) -->                                           <!-- QMK: KC_SPACE -->
+            <key code="51"  output="&#x0008;"/>     <!-- Backspace (BS) -->                                       <!-- QMK: KC_BACKSPACE -->
+            <key code="36"  output="&#x000D;"/>     <!-- Carriage Return (CR) -->                                 <!-- QMK: KC_ENTER -->
+            <key code="48"  output="&#x0009;"/>     <!-- Character Tabulation (HT, TAB) -->                       <!-- QMK: KC_TAB -->
+            <key code="53"  output="&#x001B;"/>     <!-- Escape (ESC) -->                                         <!-- QMK: KC_ESCAPE -->
+
+            <key code="70"  output="&#x001C;"/>     <!-- File Separator (FS): Numpad Arrow Left -->
+            <key code="66"  output="&#x001D;"/>     <!-- Group Separator (GS): Numpad Arrow Right -->
+            <key code="77"  output="&#x001E;"/>     <!-- Information Separator Two (RS): Numpad Arrow Up -->
+            <key code="72"  output="&#x001F;"/>     <!-- Information Separator One (US): Numpad Arrow Down -->
+            <key code="69"  output="+"/>            <!-- Numpad Plus Sign -->                                     <!-- QMK: KC_KP_PLUS -->
+            <key code="78"  output="-"/>            <!-- Numpad Hyphen-Minus -->                                  <!-- QMK: KC_KP_MINUS -->
+            <key code="67"  output="*"/>            <!-- Numpad Asterisk -->                                      <!-- QMK: KC_KP_ASTERISK -->
+            <key code="75"  output="/"/>            <!-- Numpad Solidus -->                                       <!-- QMK: KC_KP_SLASH -->
+            <key code="81"  output="="/>            <!-- Numpad Equals Sign -->                                   <!-- QMK: KC_KP_EQUAL -->
+            <key code="71"  output="&#x001B;"/>     <!-- Escape (ESC): Numpad Escape? -->
+            <key code="64"  output="&#x0010;"/>     <!-- Data Link Escape, Unknown (Num Lock?) -->                <!-- QMK: KC_NUM_LOCK -->
+            <key code="76"  output="&#x0003;"/>     <!-- End of Text (ETX): Numpad Enter -->                      <!-- QMK: KC_KP_ENTER -->
+            <key code="82"  output="0"/>            <!-- Numpad 0 -->                                             <!-- QMK: KC_KP_0 -->
+            <key code="83"  output="1"/>            <!-- Numpad 1 -->                                             <!-- QMK: KC_KP_1 -->
+            <key code="84"  output="2"/>            <!-- Numpad 2 -->                                             <!-- QMK: KC_KP_2 -->
+            <key code="85"  output="3"/>            <!-- Numpad 3 -->                                             <!-- QMK: KC_KP_3 -->
+            <key code="86"  output="4"/>            <!-- Numpad 4 -->                                             <!-- QMK: KC_KP_4 -->
+            <key code="87"  output="5"/>            <!-- Numpad 5 -->                                             <!-- QMK: KC_KP_5 -->
+            <key code="88"  output="6"/>            <!-- Numpad 6 -->                                             <!-- QMK: KC_KP_6 -->
+            <key code="89"  output="7"/>            <!-- Numpad 7 -->                                             <!-- QMK: KC_KP_7 -->
+            <key code="91"  output="8"/>            <!-- Numpad 8 -->                                             <!-- QMK: KC_KP_8 -->
+            <key code="92"  output="9"/>            <!-- Numpad 9 -->                                             <!-- QMK: KC_KP_9 -->
+
+            <key code="122" output="&#x0010;"/>     <!-- Data Link Escape (DLE): F1 -->                           <!-- QMK: KC_F1 -->
+            <key code="120" output="&#x0010;"/>     <!-- Data Link Escape (DLE): F2 -->                           <!-- QMK: KC_F2 -->
+            <key code="99"  output="&#x0010;"/>     <!-- Data Link Escape (DLE): F3 -->                           <!-- QMK: KC_F3 -->
+            <key code="118" output="&#x0010;"/>     <!-- Data Link Escape (DLE): F4 -->                           <!-- QMK: KC_F4 -->
+            <key code="96"  output="&#x0010;"/>     <!-- Data Link Escape (DLE): F5 -->                           <!-- QMK: KC_F5 -->
+            <key code="97"  output="&#x0010;"/>     <!-- Data Link Escape (DLE): F6 -->                           <!-- QMK: KC_F6 -->
+            <key code="98"  output="&#x0010;"/>     <!-- Data Link Escape (DLE): F7 -->                           <!-- QMK: KC_F7 -->
+            <key code="100" output="&#x0010;"/>     <!-- Data Link Escape (DLE): F8 -->                           <!-- QMK: KC_F8 -->
+            <key code="101" output="&#x0010;"/>     <!-- Data Link Escape (DLE): F9 -->                           <!-- QMK: KC_F9 -->
+            <key code="109" output="&#x0010;"/>     <!-- Data Link Escape (DLE): F10 -->                          <!-- QMK: KC_F10 -->
+            <key code="103" output="&#x0010;"/>     <!-- Data Link Escape (DLE): F11 -->                          <!-- QMK: KC_F11 -->
+            <key code="111" output="&#x0010;"/>     <!-- Data Link Escape (DLE): F12 -->                          <!-- QMK: KC_F12 -->
+            <key code="105" output="&#x0010;"/>     <!-- Data Link Escape (DLE): F13 -->                          <!-- QMK: KC_F13 -->
+            <key code="107" output="&#x0010;"/>     <!-- Data Link Escape (DLE): F14 -->                          <!-- QMK: KC_F14 -->
+            <key code="113" output="&#x0010;"/>     <!-- Data Link Escape (DLE): F15 -->                          <!-- QMK: KC_F15 -->
+            <key code="106" output="&#x0010;"/>     <!-- Data Link Escape (DLE): F16 -->                          <!-- QMK: KC_F16 -->
+
+            <key code="114" output="&#x0005;"/>     <!-- Enquiry (ENQ): Help -->                                  <!-- QMK: KC_HELP -->
+            <key code="117" output="&#x007F;"/>     <!-- Delete (DEL) -->                                         <!-- QMK: KC_DELETE -->
+            <key code="115" output="&#x0001;"/>     <!-- Start of Heading (SOH): Home -->                         <!-- QMK: KC_HOME -->
+            <key code="119" output="&#x0004;"/>     <!-- End of Transmission (EOT): End -->                       <!-- QMK: KC_END -->
+            <key code="116" output="↔"/>            <!-- * ↔ Left Right Arrow -->                                 <!-- QMK: KC_PAGE_UP -->
+            <key code="121" output="↕"/>            <!-- * ↕ Up Down Arrow -->                                    <!-- QMK: KC_PAGE_DOWN -->
+
+            <key code="123" output="←"/>            <!-- * ← Leftwards Arrow -->                                  <!-- QMK: KC_LEFT -->
+            <key code="124" output="→"/>            <!-- * → Rightwards Arrow -->                                 <!-- QMK: KC_RIGHT -->
+            <key code="126" output="↑"/>            <!-- * ↑ Upwards Arrow -->                                    <!-- QMK: KC_UP -->
+            <key code="125" output="↓"/>            <!-- * ↓ Downwards Arrow -->                                  <!-- QMK: KC_DOWN -->
+
+            <key code="10"  output=""/>             <!-- Empty -->
+            <key code="65"  output=""/>             <!-- Empty -->
+                                                    <!-- Missing key code: 52 -->
+                                                    <!-- Missing key code: 54 -->
+                                                    <!-- Missing key code: 55 -->
+                                                    <!-- Missing key code: 56 -->
+                                                    <!-- Missing key code: 57 -->
+                                                    <!-- Missing key code: 58 -->
+                                                    <!-- Missing key code: 59 -->
+                                                    <!-- Missing key code: 60 -->
+                                                    <!-- Missing key code: 61 -->
+                                                    <!-- Missing key code: 62 -->
+                                                    <!-- Missing key code: 63 -->
+                                                    <!-- Missing key code: 68 -->
+                                                    <!-- Missing key code: 73 -->
+                                                    <!-- Missing key code: 74 -->
+                                                    <!-- Missing key code: 90 -->
+                                                    <!-- Missing key code: 93 -->
+                                                    <!-- Missing key code: 94 -->
+                                                    <!-- Missing key code: 95 -->
+            <key code="79"  output="&#x0010;"/>     <!-- Unknown: Data Link Escape (DLE) -->
+            <key code="80"  output="&#x0010;"/>     <!-- Unknown: Data Link Escape (DLE) -->
+                                                    <!-- Missing key code: 102 -->
+                                                    <!-- Missing key code: 104 -->
+                                                    <!-- Missing key code: 108 -->
+                                                    <!-- Missing key code: 110 -->
+                                                    <!-- Missing key code: 112 -->
+                                                    <!-- Missing key code: 127 -->
         </keyMap>
+
+
+
+
+        <!-- Hyper: Command-Option-Shift-Control -->
         <keyMap index="6">
+            <key code="0"   output="+"/>            <!-- a -->                                                    <!-- QMK: KC_A -->
+            <key code="11"  output="b"/>            <!-- b -->                                                    <!-- QMK: KC_B -->
+            <key code="8"   output="c"/>            <!-- c -->                                                    <!-- QMK: KC_C -->
+            <key code="2"   output="d"/>            <!-- d -->                                                    <!-- QMK: KC_D -->
+            <key code="14"  output="e"/>            <!-- e -->                                                    <!-- QMK: KC_E -->
+            <key code="3"   output="f"/>            <!-- f -->                                                    <!-- QMK: KC_F -->
+            <key code="5"   output="g"/>            <!-- g -->                                                    <!-- QMK: KC_G -->
+            <key code="4"   output="h"/>            <!-- h -->                                                    <!-- QMK: KC_H -->
+            <key code="34"  output="i"/>            <!-- i -->                                                    <!-- QMK: KC_I -->
+            <key code="38"  output="j"/>            <!-- j -->                                                    <!-- QMK: KC_J -->
+            <key code="40"  output="k"/>            <!-- k -->                                                    <!-- QMK: KC_K -->
+            <key code="37"  output="l"/>            <!-- l -->                                                    <!-- QMK: KC_L -->
+            <key code="46"  output="m"/>            <!-- m -->                                                    <!-- QMK: KC_M -->
+            <key code="45"  output="n"/>            <!-- n -->                                                    <!-- QMK: KC_N -->
+            <key code="31"  output="o"/>            <!-- o -->                                                    <!-- QMK: KC_O -->
+            <key code="35"  output="p"/>            <!-- p -->                                                    <!-- QMK: KC_P -->
+            <key code="12"  output="q"/>            <!-- q -->                                                    <!-- QMK: KC_Q -->
+            <key code="15"  output="r"/>            <!-- r -->                                                    <!-- QMK: KC_R -->
+            <key code="1"   output="s"/>            <!-- s -->                                                    <!-- QMK: KC_S -->
+            <key code="17"  output="t"/>            <!-- t -->                                                    <!-- QMK: KC_T -->
+            <key code="32"  output="u"/>            <!-- u -->                                                    <!-- QMK: KC_U -->
+            <key code="9"   output="v"/>            <!-- v -->                                                    <!-- QMK: KC_V -->
+            <key code="13"  output="w"/>            <!-- w -->                                                    <!-- QMK: KC_W -->
+            <key code="7"   output="x"/>            <!-- x -->                                                    <!-- QMK: KC_X -->
+            <key code="16"  output="y"/>            <!-- y -->                                                    <!-- QMK: KC_Y -->
+            <key code="6"   output="z"/>            <!-- z -->                                                    <!-- QMK: KC_Z -->
 
-            <!-- Modifier keys: Control -->
+            <key code="29"  output="0"/>            <!-- 0 -->                                                    <!-- QMK: KC_0 -->
+            <key code="18"  output="1"/>            <!-- 1 -->                                                    <!-- QMK: KC_1 -->
+            <key code="19"  output="2"/>            <!-- 2 -->                                                    <!-- QMK: KC_2 -->
+            <key code="20"  output="3"/>            <!-- 3 -->                                                    <!-- QMK: KC_3 -->
+            <key code="21"  output="4"/>            <!-- 4 -->                                                    <!-- QMK: KC_4 -->
+            <key code="23"  output="5"/>            <!-- 5 -->                                                    <!-- QMK: KC_5 -->
+            <key code="22"  output="6"/>            <!-- 6 -->                                                    <!-- QMK: KC_6 -->
+            <key code="26"  output="7"/>            <!-- 7 -->                                                    <!-- QMK: KC_7 -->
+            <key code="28"  output="8"/>            <!-- 8 -->                                                    <!-- QMK: KC_8 -->
+            <key code="25"  output="9"/>            <!-- 9 -->                                                    <!-- QMK: KC_9 -->
 
-            <key code="0" output=""/>
-            <key code="1" output=""/>
-            <key code="2" output=""/>
-            <key code="3" output=""/>
-            <key code="4" output=""/>
-            <key code="5" output=""/>
-            <key code="6" output=""/>
-            <key code="7" output=""/>
-            <key code="8" output=""/>
-            <key code="9" output=""/>
-            <key code="10" output=""/>
-            <key code="11" output=""/>
-            <key code="12" output=""/>
-            <key code="13" output=""/>
-            <key code="14" output=""/>
-            <key code="15" output=""/>
-            <key code="16" output=""/>
-            <key code="17" output=""/>
-            <key code="18" output=""/>
-            <key code="19" output=""/>
-            <key code="20" output=""/>
-            <key code="21" output=""/>
-            <key code="22" output=""/>
-            <key code="23" output=""/>
-            <key code="24" output=""/>
-            <key code="25" output=""/>
-            <key code="26" output=""/>
-            <key code="27" output=""/>
-            <key code="28" output=""/>
-            <key code="29" output=""/>
-            <key code="30" output=""/>
-            <key code="31" output=""/>
-            <key code="32" output=""/>
-            <key code="33" output=""/>
-            <key code="34" output=""/>
-            <key code="35" output=""/>
-            <key code="36" output="&#x000D;"/>
-            <key code="37" output=""/>
-            <key code="38" output=""/>
-            <key code="39" output=""/>
-            <key code="40" output=""/>
-            <key code="41" output=""/>
-            <key code="42" output=""/>
-            <key code="43" output=""/>
-            <key code="44" output=""/>
-            <key code="45" output=""/>
-            <key code="46" output=""/>
-            <key code="47" output=""/>
-            <key code="48" output="&#x0009;"/>
-            <key code="49" output=""/>
-            <key code="50" output=""/>
-            <key code="51" output="&#x0008;"/>
-            <key code="53" output="&#x001B;"/>
-            <key code="64" output="&#x0010;"/>
-            <key code="65" output=""/>
-            <key code="66" output="&#x001D;"/>
-            <key code="67" output=""/>
-            <key code="69" output=""/>
-            <key code="70" output="&#x001C;"/>
-            <key code="71" output="&#x001B;"/>
-            <key code="72" output="&#x001F;"/>
-            <key code="75" output=""/>
-            <key code="76" output="&#x0003;"/>
-            <key code="77" output="&#x001E;"/>
-            <key code="78" output=""/>
-            <key code="79" output="&#x0010;"/>
-            <key code="80" output="&#x0010;"/>
-            <key code="81" output=""/>
-            <key code="82" output=""/>
-            <key code="83" output=""/>
-            <key code="84" output=""/>
-            <key code="85" output=""/>
-            <key code="86" output=""/>
-            <key code="87" output=""/>
-            <key code="88" output=""/>
-            <key code="89" output=""/>
-            <key code="91" output=""/>
-            <key code="92" output=""/>
-            <key code="96" output="&#x0010;"/>
-            <key code="97" output="&#x0010;"/>
-            <key code="98" output="&#x0010;"/>
-            <key code="99" output="&#x0010;"/>
-            <key code="100" output="&#x0010;"/>
-            <key code="101" output="&#x0010;"/>
-            <key code="103" output="&#x0010;"/>
-            <key code="105" output="&#x0010;"/>
-            <key code="106" output="&#x0010;"/>
-            <key code="107" output="&#x0010;"/>
-            <key code="109" output="&#x0010;"/>
-            <key code="111" output="&#x0010;"/>
-            <key code="113" output="&#x0010;"/>
-            <key code="114" output="&#x0005;"/>
-            <key code="115" output="&#x0001;"/>
-            <key code="116" output="&#x000B;"/>
-            <key code="117" output="&#x007F;"/>
-            <key code="118" output="&#x0010;"/>
-            <key code="119" output="&#x0004;"/>
-            <key code="120" output="&#x0010;"/>
-            <key code="121" output="&#x000C;"/>
-            <key code="122" output="&#x0010;"/>
-            <key code="123" output="&#x001C;"/>
-            <key code="124" output="&#x001D;"/>
-            <key code="125" output="&#x001F;"/>
-            <key code="126" output="&#x001E;"/>
+            <key code="27"  output="-"/>            <!-- Hyphen-Minus -->                                         <!-- QMK: KC_MINUS -->
+            <key code="44"  output="/"/>            <!-- Solidus -->                                              <!-- QMK: KC_SLASH -->
+            <key code="42"  output="\"/>            <!-- Reverse Solidus -->                                      <!-- QMK: KC_BACKSLASH -->
+            <key code="24"  output="="/>            <!-- Equals Sign -->                                          <!-- QMK: KC_EQUAL -->
+            <key code="33"  output="["/>            <!-- Left Square Bracket -->                                  <!-- QMK: KC_LEFT_BRACKET -->
+            <key code="30"  output="]"/>            <!-- Right Square Bracket -->                                 <!-- QMK: KC_RIGHT_BRACKET -->
+            <key code="43"  output=","/>            <!-- Comma -->                                                <!-- QMK: KC_COMMA -->
+            <key code="47"  output="."/>            <!-- Full Stop -->                                            <!-- QMK: KC_DOT -->
+            <key code="41"  output=";"/>            <!-- Semicolon -->                                            <!-- QMK: KC_SEMICOLON -->
+            <key code="39"  output="&#x0027;"/>     <!-- Apostrophe -->                                           <!-- QMK: KC_QUOTE -->
+            <key code="50"  output="`"/>            <!-- Grave Accent -->                                         <!-- QMK: KC_GRAVE -->
+
+            <key code="49"  output=" "/>            <!-- Space (SP) -->                                           <!-- QMK: KC_SPACE -->
+            <key code="51"  output="&#x0008;"/>     <!-- Backspace (BS) -->                                       <!-- QMK: KC_BACKSPACE -->
+            <key code="36"  output="&#x000D;"/>     <!-- Carriage Return (CR) -->                                 <!-- QMK: KC_ENTER -->
+            <key code="48"  output="&#x0009;"/>     <!-- Character Tabulation (HT, TAB) -->                       <!-- QMK: KC_TAB -->
+            <key code="53"  output="&#x001B;"/>     <!-- Escape (ESC) -->                                         <!-- QMK: KC_ESCAPE -->
+
+            <key code="70"  output="&#x001C;"/>     <!-- File Separator (FS): Numpad Arrow Left -->
+            <key code="66"  output="&#x001D;"/>     <!-- Group Separator (GS): Numpad Arrow Right -->
+            <key code="77"  output="&#x001E;"/>     <!-- Information Separator Two (RS): Numpad Arrow Up -->
+            <key code="72"  output="&#x001F;"/>     <!-- Information Separator One (US): Numpad Arrow Down -->
+            <key code="69"  output="+"/>            <!-- Numpad Plus Sign -->                                     <!-- QMK: KC_KP_PLUS -->
+            <key code="78"  output="-"/>            <!-- Numpad Hyphen-Minus -->                                  <!-- QMK: KC_KP_MINUS -->
+            <key code="67"  output="*"/>            <!-- Numpad Asterisk -->                                      <!-- QMK: KC_KP_ASTERISK -->
+            <key code="75"  output="/"/>            <!-- Numpad Solidus -->                                       <!-- QMK: KC_KP_SLASH -->
+            <key code="81"  output="="/>            <!-- Numpad Equals Sign -->                                   <!-- QMK: KC_KP_EQUAL -->
+            <key code="71"  output="&#x001B;"/>     <!-- Escape (ESC): Numpad Escape? -->
+            <key code="64"  output="&#x0010;"/>     <!-- Data Link Escape, Unknown (Num Lock?) -->                <!-- QMK: KC_NUM_LOCK -->
+            <key code="76"  output="&#x0003;"/>     <!-- End of Text (ETX): Numpad Enter -->                      <!-- QMK: KC_KP_ENTER -->
+            <key code="82"  output="0"/>            <!-- Numpad 0 -->                                             <!-- QMK: KC_KP_0 -->
+            <key code="83"  output="1"/>            <!-- Numpad 1 -->                                             <!-- QMK: KC_KP_1 -->
+            <key code="84"  output="2"/>            <!-- Numpad 2 -->                                             <!-- QMK: KC_KP_2 -->
+            <key code="85"  output="3"/>            <!-- Numpad 3 -->                                             <!-- QMK: KC_KP_3 -->
+            <key code="86"  output="4"/>            <!-- Numpad 4 -->                                             <!-- QMK: KC_KP_4 -->
+            <key code="87"  output="5"/>            <!-- Numpad 5 -->                                             <!-- QMK: KC_KP_5 -->
+            <key code="88"  output="6"/>            <!-- Numpad 6 -->                                             <!-- QMK: KC_KP_6 -->
+            <key code="89"  output="7"/>            <!-- Numpad 7 -->                                             <!-- QMK: KC_KP_7 -->
+            <key code="91"  output="8"/>            <!-- Numpad 8 -->                                             <!-- QMK: KC_KP_8 -->
+            <key code="92"  output="9"/>            <!-- Numpad 9 -->                                             <!-- QMK: KC_KP_9 -->
+
+            <key code="122" output="&#x0010;"/>     <!-- Data Link Escape (DLE): F1 -->                           <!-- QMK: KC_F1 -->
+            <key code="120" output="&#x0010;"/>     <!-- Data Link Escape (DLE): F2 -->                           <!-- QMK: KC_F2 -->
+            <key code="99"  output="&#x0010;"/>     <!-- Data Link Escape (DLE): F3 -->                           <!-- QMK: KC_F3 -->
+            <key code="118" output="&#x0010;"/>     <!-- Data Link Escape (DLE): F4 -->                           <!-- QMK: KC_F4 -->
+            <key code="96"  output="&#x0010;"/>     <!-- Data Link Escape (DLE): F5 -->                           <!-- QMK: KC_F5 -->
+            <key code="97"  output="&#x0010;"/>     <!-- Data Link Escape (DLE): F6 -->                           <!-- QMK: KC_F6 -->
+            <key code="98"  output="&#x0010;"/>     <!-- Data Link Escape (DLE): F7 -->                           <!-- QMK: KC_F7 -->
+            <key code="100" output="&#x0010;"/>     <!-- Data Link Escape (DLE): F8 -->                           <!-- QMK: KC_F8 -->
+            <key code="101" output="&#x0010;"/>     <!-- Data Link Escape (DLE): F9 -->                           <!-- QMK: KC_F9 -->
+            <key code="109" output="&#x0010;"/>     <!-- Data Link Escape (DLE): F10 -->                          <!-- QMK: KC_F10 -->
+            <key code="103" output="&#x0010;"/>     <!-- Data Link Escape (DLE): F11 -->                          <!-- QMK: KC_F11 -->
+            <key code="111" output="&#x0010;"/>     <!-- Data Link Escape (DLE): F12 -->                          <!-- QMK: KC_F12 -->
+            <key code="105" output="&#x0010;"/>     <!-- Data Link Escape (DLE): F13 -->                          <!-- QMK: KC_F13 -->
+            <key code="107" output="&#x0010;"/>     <!-- Data Link Escape (DLE): F14 -->                          <!-- QMK: KC_F14 -->
+            <key code="113" output="&#x0010;"/>     <!-- Data Link Escape (DLE): F15 -->                          <!-- QMK: KC_F15 -->
+            <key code="106" output="&#x0010;"/>     <!-- Data Link Escape (DLE): F16 -->                          <!-- QMK: KC_F16 -->
+
+            <key code="114" output="&#x0005;"/>     <!-- Enquiry (ENQ): Help -->                                  <!-- QMK: KC_HELP -->
+            <key code="117" output="&#x007F;"/>     <!-- Delete (DEL) -->                                         <!-- QMK: KC_DELETE -->
+            <key code="115" output="&#x0001;"/>     <!-- Start of Heading (SOH): Home -->                         <!-- QMK: KC_HOME -->
+            <key code="119" output="&#x0004;"/>     <!-- End of Transmission (EOT): End -->                       <!-- QMK: KC_END -->
+            <key code="116" output="&#x000B;"/>     <!-- Line Tabulation (VT): Page Up -->                        <!-- QMK: KC_PAGE_UP -->
+            <key code="121" output="&#x000C;"/>     <!-- Form Feed (FF): Page Down -->                            <!-- QMK: KC_PAGE_DOWN -->
+
+            <key code="123" output="&#x001C;"/>     <!-- File Separator (FS): Arrow Left -->                      <!-- QMK: KC_LEFT -->
+            <key code="124" output="&#x001D;"/>     <!-- Group Separator (GS): Arrow Right -->                    <!-- QMK: KC_RIGHT -->
+            <key code="126" output="&#x001E;"/>     <!-- Information Separator Two (RS): Arrow Up -->             <!-- QMK: KC_UP -->
+            <key code="125" output="&#x001F;"/>     <!-- Information Separator One (US): Arrow Down -->           <!-- QMK: KC_DOWN -->
+
+            <key code="10"  output=""/>             <!-- Empty -->
+            <key code="65"  output=""/>             <!-- Empty -->
+                                                    <!-- Missing key code: 52 -->
+                                                    <!-- Missing key code: 54 -->
+                                                    <!-- Missing key code: 55 -->
+                                                    <!-- Missing key code: 56 -->
+                                                    <!-- Missing key code: 57 -->
+                                                    <!-- Missing key code: 58 -->
+                                                    <!-- Missing key code: 59 -->
+                                                    <!-- Missing key code: 60 -->
+                                                    <!-- Missing key code: 61 -->
+                                                    <!-- Missing key code: 62 -->
+                                                    <!-- Missing key code: 63 -->
+                                                    <!-- Missing key code: 68 -->
+                                                    <!-- Missing key code: 73 -->
+                                                    <!-- Missing key code: 74 -->
+                                                    <!-- Missing key code: 90 -->
+                                                    <!-- Missing key code: 93 -->
+                                                    <!-- Missing key code: 94 -->
+                                                    <!-- Missing key code: 95 -->
+            <key code="79"  output="&#x0010;"/>     <!-- Unknown: Data Link Escape (DLE) -->
+            <key code="80"  output="&#x0010;"/>     <!-- Unknown: Data Link Escape (DLE) -->
+                                                    <!-- Missing key code: 102 -->
+                                                    <!-- Missing key code: 104 -->
+                                                    <!-- Missing key code: 108 -->
+                                                    <!-- Missing key code: 110 -->
+                                                    <!-- Missing key code: 112 -->
+                                                    <!-- Missing key code: 127 -->
         </keyMap>
+
     </keyMapSet>
+
+
+
+
     <keyMapSet id="JIS">
         <keyMap index="0" baseMapSet="ANSI" baseIndex="0">
             <key code="512" output=""/>
@@ -868,4 +1081,8 @@
             <key code="512" output=""/>
         </keyMap>
     </keyMapSet>
+
+
+
+
 </keyboard>
