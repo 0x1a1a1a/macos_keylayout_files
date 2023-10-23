@@ -3,13 +3,16 @@
 ### Release notes
 
 #### v2.1
+
 * Fixed a small bug with a letter `Й`
 * Initiated a `readme.md` file
 
 #### v2
+
 * Organized the file as a table with `keycodes`, keycode names and an their aliases in QMK
 
 #### v1
+
 * Initiated custom .keylayout files with comments to each `keycode`
 
 ----

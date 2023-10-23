@@ -260,16 +260,16 @@
             <key code="71"  output="&#x001B;"/>     <!-- Escape (ESC): Numpad Escape? -->
             <key code="64"  output="&#x0010;"/>     <!-- Data Link Escape, Unknown (Num Lock?) -->                <!-- QMK: KC_NUM_LOCK -->
             <key code="76"  output="&#x0003;"/>     <!-- End of Text (ETX): Numpad Enter -->                      <!-- QMK: KC_KP_ENTER -->
-            <key code="82"  output="0"/>            <!-- Numpad 0 -->                                             <!-- QMK: KC_KP_0 -->
-            <key code="83"  output="1"/>            <!-- Numpad 1 -->                                             <!-- QMK: KC_KP_1 -->
-            <key code="84"  output="2"/>            <!-- Numpad 2 -->                                             <!-- QMK: KC_KP_2 -->
-            <key code="85"  output="3"/>            <!-- Numpad 3 -->                                             <!-- QMK: KC_KP_3 -->
-            <key code="86"  output="4"/>            <!-- Numpad 4 -->                                             <!-- QMK: KC_KP_4 -->
-            <key code="87"  output="5"/>            <!-- Numpad 5 -->                                             <!-- QMK: KC_KP_5 -->
-            <key code="88"  output="6"/>            <!-- Numpad 6 -->                                             <!-- QMK: KC_KP_6 -->
-            <key code="89"  output="7"/>            <!-- Numpad 7 -->                                             <!-- QMK: KC_KP_7 -->
-            <key code="91"  output="8"/>            <!-- Numpad 8 -->                                             <!-- QMK: KC_KP_8 -->
-            <key code="92"  output="9"/>            <!-- Numpad 9 -->                                             <!-- QMK: KC_KP_9 -->
+            <key code="82"  output="ĝ"/>            <!-- Numpad 0 -->                                             <!-- QMK: KC_KP_0 -->
+            <key code="83"  output="ê"/>            <!-- Numpad 1 -->                                             <!-- QMK: KC_KP_1 -->
+            <key code="84"  output="ž"/>            <!-- Numpad 2 -->                                             <!-- QMK: KC_KP_2 -->
+            <key code="85"  output="ї"/>            <!-- Numpad 3 -->                                             <!-- QMK: KC_KP_3 -->
+            <key code="86"  output="č"/>            <!-- Numpad 4 -->                                             <!-- QMK: KC_KP_4 -->
+            <key code="87"  output="š"/>            <!-- Numpad 5 -->                                             <!-- QMK: KC_KP_5 -->
+            <key code="88"  output="ŝ"/>            <!-- Numpad 6 -->                                             <!-- QMK: KC_KP_6 -->
+            <key code="89"  output="û"/>            <!-- Numpad 7 -->                                             <!-- QMK: KC_KP_7 -->
+            <key code="91"  output="â"/>            <!-- Numpad 8 -->                                             <!-- QMK: KC_KP_8 -->
+            <key code="92"  output=""/>            <!-- Numpad 9 -->                                             <!-- QMK: KC_KP_9 -->
 
             <key code="122" output="&#x0010;"/>     <!-- Data Link Escape (DLE): F1 -->                           <!-- QMK: KC_F1 -->
             <key code="120" output="&#x0010;"/>     <!-- Data Link Escape (DLE): F2 -->                           <!-- QMK: KC_F2 -->
@@ -403,16 +403,16 @@
             <key code="71"  output="&#x001B;"/>     <!-- Escape (ESC): Numpad Escape? -->
             <key code="64"  output="&#x0010;"/>     <!-- Data Link Escape, Unknown (Num Lock?) -->                <!-- QMK: KC_NUM_LOCK -->
             <key code="76"  output="&#x0003;"/>     <!-- End of Text (ETX): Numpad Enter -->                      <!-- QMK: KC_KP_ENTER -->
-            <key code="82"  output="0"/>            <!-- Numpad 0 -->                                             <!-- QMK: KC_KP_0 -->
-            <key code="83"  output="1"/>            <!-- Numpad 1 -->                                             <!-- QMK: KC_KP_1 -->
-            <key code="84"  output="2"/>            <!-- Numpad 2 -->                                             <!-- QMK: KC_KP_2 -->
-            <key code="85"  output="3"/>            <!-- Numpad 3 -->                                             <!-- QMK: KC_KP_3 -->
-            <key code="86"  output="4"/>            <!-- Numpad 4 -->                                             <!-- QMK: KC_KP_4 -->
-            <key code="87"  output="5"/>            <!-- Numpad 5 -->                                             <!-- QMK: KC_KP_5 -->
-            <key code="88"  output="6"/>            <!-- Numpad 6 -->                                             <!-- QMK: KC_KP_6 -->
-            <key code="89"  output="7"/>            <!-- Numpad 7 -->                                             <!-- QMK: KC_KP_7 -->
-            <key code="91"  output="8"/>            <!-- Numpad 8 -->                                             <!-- QMK: KC_KP_8 -->
-            <key code="92"  output="9"/>            <!-- Numpad 9 -->                                             <!-- QMK: KC_KP_9 -->
+            <key code="82"  output="Ĝ"/>            <!-- Numpad 0 -->                                             <!-- QMK: KC_KP_0 -->
+            <key code="83"  output="Ê"/>            <!-- Numpad 1 -->                                             <!-- QMK: KC_KP_1 -->
+            <key code="84"  output="Ž"/>            <!-- Numpad 2 -->                                             <!-- QMK: KC_KP_2 -->
+            <key code="85"  output="Ї"/>            <!-- Numpad 3 -->                                             <!-- QMK: KC_KP_3 -->
+            <key code="86"  output="Č"/>            <!-- Numpad 4 -->                                             <!-- QMK: KC_KP_4 -->
+            <key code="87"  output="Š"/>            <!-- Numpad 5 -->                                             <!-- QMK: KC_KP_5 -->
+            <key code="88"  output="Ŝ"/>            <!-- Numpad 6 -->                                             <!-- QMK: KC_KP_6 -->
+            <key code="89"  output="Û"/>            <!-- Numpad 7 -->                                             <!-- QMK: KC_KP_7 -->
+            <key code="91"  output="Â"/>            <!-- Numpad 8 -->                                             <!-- QMK: KC_KP_8 -->
+            <key code="92"  output=""/>            <!-- Numpad 9 -->                                             <!-- QMK: KC_KP_9 -->
 
             <key code="122" output="&#x0010;"/>     <!-- Data Link Escape (DLE): F1 -->                           <!-- QMK: KC_F1 -->
             <key code="120" output="&#x0010;"/>     <!-- Data Link Escape (DLE): F2 -->                           <!-- QMK: KC_F2 -->
