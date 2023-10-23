@@ -269,7 +269,7 @@
             <key code="88"  output="ŝ"/>            <!-- Numpad 6 -->                                             <!-- QMK: KC_KP_6 -->
             <key code="89"  output="û"/>            <!-- Numpad 7 -->                                             <!-- QMK: KC_KP_7 -->
             <key code="91"  output="â"/>            <!-- Numpad 8 -->                                             <!-- QMK: KC_KP_8 -->
-            <key code="92"  output=""/>            <!-- Numpad 9 -->                                             <!-- QMK: KC_KP_9 -->
+            <key code="92"  output=""/>             <!-- Numpad 9 -->                                             <!-- QMK: KC_KP_9 -->
 
             <key code="122" output="&#x0010;"/>     <!-- Data Link Escape (DLE): F1 -->                           <!-- QMK: KC_F1 -->
             <key code="120" output="&#x0010;"/>     <!-- Data Link Escape (DLE): F2 -->                           <!-- QMK: KC_F2 -->
@@ -412,7 +412,7 @@
             <key code="88"  output="Ŝ"/>            <!-- Numpad 6 -->                                             <!-- QMK: KC_KP_6 -->
             <key code="89"  output="Û"/>            <!-- Numpad 7 -->                                             <!-- QMK: KC_KP_7 -->
             <key code="91"  output="Â"/>            <!-- Numpad 8 -->                                             <!-- QMK: KC_KP_8 -->
-            <key code="92"  output=""/>            <!-- Numpad 9 -->                                             <!-- QMK: KC_KP_9 -->
+            <key code="92"  output=""/>             <!-- Numpad 9 -->                                             <!-- QMK: KC_KP_9 -->
 
             <key code="122" output="&#x0010;"/>     <!-- Data Link Escape (DLE): F1 -->                           <!-- QMK: KC_F1 -->
             <key code="120" output="&#x0010;"/>     <!-- Data Link Escape (DLE): F2 -->                           <!-- QMK: KC_F2 -->
