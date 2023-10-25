@@ -2,6 +2,27 @@
 
 ### Release notes
 
+#### v2.2
+
+* Added `mapIndex` for **Option + Shift** combination
+* Added letters for [Latynka](https://en.wikipedia.org/wiki/Ukrainian_Latin_alphabet) to **EN** keylayout according to modified ISO 9:
+    * Â and â (a with circumflex)
+    * Č and č (c with caron)
+    * Ċ and ċ (c with dot above)
+    * Ḋ and ḋ (d with dot above)
+    * Ê and ê (e with cicrumflex)
+    * Ĝ and ĝ (g with circumflex)
+    * Ї and ї (i with diaeresis)
+    * L̇ and l̇ (l with dot above)
+    * Ṅ and ṅ (n with dot above)
+    * Ô and ô (o with circumflex)
+    * Š and š (s with caron)
+    * Ŝ and ŝ (s with circumflex)
+    * Ṡ and ṡ (s with dot above)
+    * Ṫ and ṫ (t with dot above)
+    * Û and û (u with circumflex)
+    * Ž and ž (z with caron)
+
 #### v2.1
 
 * Fixed a small bug with a letter `Й`
