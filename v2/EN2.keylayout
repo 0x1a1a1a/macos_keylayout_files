@@ -630,7 +630,7 @@
             <key code="2"   output="ḋ"/>            <!-- d -->                                                    <!-- QMK: KC_D -->
             <key code="14"  output="ê"/>            <!-- e -->                                                    <!-- QMK: KC_E -->
             <key code="3"   output="f"/>            <!-- f -->                                                    <!-- QMK: KC_F -->
-            <key code="5"   output="ĝ"/>            <!-- g -->                                                    <!-- QMK: KC_G -->
+            <key code="5"   output="ğ"/>            <!-- g -->                                                    <!-- QMK: KC_G -->
             <key code="4"   output="h"/>            <!-- h -->                                                    <!-- QMK: KC_H -->
             <key code="34"  output="ї"/>            <!-- i -->                                                    <!-- QMK: KC_I -->
             <key code="38"  output="j"/>            <!-- j -->                                                    <!-- QMK: KC_J -->
@@ -773,7 +773,7 @@
             <key code="2"   output="Ḋ"/>            <!-- d -->                                                    <!-- QMK: KC_D -->
             <key code="14"  output="Ê"/>            <!-- e -->                                                    <!-- QMK: KC_E -->
             <key code="3"   output="F"/>            <!-- f -->                                                    <!-- QMK: KC_F -->
-            <key code="5"   output="Ĝ"/>            <!-- g -->                                                    <!-- QMK: KC_G -->
+            <key code="5"   output="Ğ"/>            <!-- g -->                                                    <!-- QMK: KC_G -->
             <key code="4"   output="H"/>            <!-- h -->                                                    <!-- QMK: KC_H -->
             <key code="34"  output="Ї"/>            <!-- i -->                                                    <!-- QMK: KC_I -->
             <key code="38"  output="J"/>            <!-- j -->                                                    <!-- QMK: KC_J -->
